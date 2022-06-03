@@ -8,9 +8,6 @@ Email: tiannuo_yang@126.com
 ---
 This is Tiannuo Yang, currently a master student in College of Computer Science at Nankai University. I am working with associate professor Yusen Li as my advisor. My research interest lies in dynamic resource management in general.  
 
-
-https://www.cs.purdue.edu/homes/choi293/index.html
-
 ---
 **RESEARCH INTERESTS**
 
@@ -19,7 +16,7 @@ Resource Management in Distributed Interactive Applications
 ---
 **EDUCATION BACKGROUND**
 
-*2022.08-Present* B.E. in Computer Science  
+*2022.08-Present* M.E. in Computer Science  
 [Nankai University](https://en.ustb.edu.cn/), Tianjin, China.  
 Advisor: Assoc Prof. [Yusen Li](https://liyusen-nku.github.io/)
 

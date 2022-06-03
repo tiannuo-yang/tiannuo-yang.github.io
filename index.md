@@ -1,20 +1,25 @@
+<img align="left" src="https://github.com/tiannuo-yang/tiannuo-yang.github.io/blob/main/personal_photo.JPG" width = '135' height ='135'>
+
 **Tiannuo Yang (杨天诺)**  
 Master Student in [NBJL](https://nbjl.nankai.edu.cn/)   
 [College of Computer Science](https://encc.nankai.edu.cn/)  
 [Nankai University](https://en.nankai.edu.cn/), Tianjin, China.
 
-Email: tiannuo_yang@126.com
+Email: <tiannuo_yang@126.com>
 
 ---
 This is Tiannuo Yang, currently a master student in College of Computer Science at Nankai University. I am working with associate professor Yusen Li as my advisor. My research interest lies in dynamic resource management in general.  
 
+
+https://www.cs.purdue.edu/homes/choi293/index.html
+
 ---
-**RESEARCH INTERESTS**
+#### RESEARCH INTERESTS
 
 Resource Management in Distributed Interactive Applications
 
 ---
-**EDUCATION BACKGROUND**
+#### EDUCATION BACKGROUND
 
 *2022.08-Present* M.E. in Computer Science  
 [Nankai University](https://en.ustb.edu.cn/), Tianjin, China.  

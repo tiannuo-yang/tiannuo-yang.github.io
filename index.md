@@ -1,4 +1,4 @@
-![photo](https://github.com/tiannuo-yang/tiannuo-yang.github.io/blob/main/personal_photo.JPG)
+![photo](https://github.com/tiannuo-yang/tiannuo-yang.github.io/blob/main/personal_photo.JPG){: width="50px" height="50px"}
 
 **Tiannuo Yang (杨天诺)**  
 Master Student in [NBJL](https://nbjl.nankai.edu.cn/)   

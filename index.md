@@ -1,4 +1,4 @@
-<img align="left" src="https://github.com/tiannuo-yang/tiannuo-yang.github.io/blob/main/personal_photo.JPG" width = '135' height ='135'>
+<img align="left" src="./personal_photo.JPG" width = '135' height ='135'>
 
 **Tiannuo Yang (杨天诺)**  
 Master Student in [NBJL](https://nbjl.nankai.edu.cn/)   

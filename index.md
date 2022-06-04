@@ -9,6 +9,8 @@ Shanghai Jiao Tong University
 Email: <chuzhongzhu@126.com>
 
 ---
+#### WHO AM I
+
 I am Hongjun, a Ph.D. candidate in Department of Computer Science at Purdue University. I am working with professor Xiangyu Zhang as my advisor. My research interest lies in systems and software security in general. In particular, I am recently focusing on security in Autonomous Cyber-Physical Systems (CPS) such as drones and self-driving cars. My research aims to build secure and reliable autonomous CPS by bridging the gap between the cyber and physical domains. I have recently proposed holistic security solutions for vehicular CPS, including physical attack detection, sensor attack recovery, CP-inconsistency vulnerability identification in control programs, and CPS forensics.  
 Before joining Purdue, I received an M.S. and a B.S. from Pohang University of Science and Technology (Postech) (advised by professor Jong Kim and professor emeritus SungJe Hong) and Kyungbook National University (KNU). I also worked as a staff software engineer in Korea Software Solutions Lab (KSSL) and Ubiquitous Computing Lab (UCL) at IBM.
 

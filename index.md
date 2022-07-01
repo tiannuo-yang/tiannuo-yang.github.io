@@ -8,7 +8,7 @@ Master Student in [NBJL](https://nbjl.nankai.edu.cn/)
 Email: <tiannuo_yang@126.com>
 
 
-🆕 **Submitted** a working paper about *optimization model under integrated passenger and freight transportation* to Elsevier.
+🆕 **Submitted** a working paper about [*optimization model under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.
 
 
 ---

@@ -1,11 +1,11 @@
 <img align="left" src="./personal_photo.JPG" width = '135' height ='135'>
 
 **Tiannuo Yang (杨天诺)**  
-Master Student in [NBJL](https://nbjl.nankai.edu.cn/)   
-[College of Computer Science](https://encc.nankai.edu.cn/)  
-[Nankai University](https://en.nankai.edu.cn/), Tianjin, China.
+Master Student  
+[Parallel and Distributed Software Technology Lab](https://nbjl.nankai.edu.cn/)   
+[College of Computer Science](https://encc.nankai.edu.cn/), [Nankai University](https://en.nankai.edu.cn/)
 
-Email: <tiannuo_yang@126.com>
+📫 <tiannuo_yang@126.com>
 
 
 🆕 **Submitted** a working paper about [*optimization model under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.
@@ -20,8 +20,7 @@ Tiannuo Yang is currently a master student of Computer Science at Nankai Univers
 ---
 #### RESEARCH INTERESTS
 
-Online Learning Algorithm for Computer Systems,  
-Modeling Optimization for Transportation Scheduling.
+**Online Learning** for Computer Systems & **Modeling Optimization** for Transportation Scheduling.
 
 ---
 #### EDUCATION BACKGROUND

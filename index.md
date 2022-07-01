@@ -5,15 +5,16 @@ Master Student
 [Parallel and Distributed Software Technology Lab](https://nbjl.nankai.edu.cn/)   
 [College of Computer Science](https://encc.nankai.edu.cn/), [Nankai University](https://en.nankai.edu.cn/)
 
-📫 <tiannuo_yang@126.com>
+Email: <tiannuo_yang@126.com>
 
 
-🆕 **Submitted** a working paper about [*optimization model under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.
-
+🆕 07/2022 **Submitted** a working paper about [*optimization model under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.  
+🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing😊.
 
 ---
 #### BRIEF INTRO
-Tiannuo Yang is currently a master student of Computer Science at Nankai University, Tianjin, China. His research interests include Transportation Scheduling, Modeling Optimization and Resource Management in Computer Systems. He received the BMgmt degree in Information Management and Information System from University of Science and Technology Beijing, China. 
+I am currently a master student of Computer Science at Nankai University (NKU) with Assoc Prof. [Yusen Li](https://liyusen-nku.github.io/) as my advisor. My research interest lies in **learning approaches in computer systems** in general. Particularly, I am recently focusing on **Collaborative Auto-Tuning and Resource Allocation** for complex applications. My research aims to design effective and autonomic architecture based on bandit related algorithm and provide extensive tradeoff for resource utilization and performance.  
+Before joining NKU, I received the BMgmt degree in Information Management and Information System from University of Science and Technology Beijing (USTB). My graduation thesis on vehicle routing problems was further revised and submitted to Elsevier. I also participated in an one-year research project (i.e., Coordination and Optimization of Complex Systems Based on Deep Learning) in University of Chinese Academy of Sciences (UCAS) and studied data-driven time-dependent vehicle routing problems (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui)).
 
 <!-- https://www.cs.purdue.edu/homes/choi293/index.html -->
 
@@ -36,4 +37,3 @@ GPA: 3.87/4.0
 *2019.09-2020.01* Exchange Program in Information Management  
 [Southern Taiwan University of Science and Technology](https://www.stust.edu.tw/en/), Taiwan, China.  
 GPA: 4.0/4.0
-

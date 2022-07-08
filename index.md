@@ -5,7 +5,7 @@ Master Student
 [Parallel and Distributed Software Technology Lab](https://nbjl.nankai.edu.cn/)   
 [College of Computer Science](https://encc.nankai.edu.cn/), [Nankai University](https://en.nankai.edu.cn/)
 
-Email: <tiannuo_yang@126.com>
+Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 
 🆕 07/2022 **Submitted** a working paper about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.  

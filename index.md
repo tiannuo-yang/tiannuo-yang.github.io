@@ -8,7 +8,7 @@ Master Student
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 
-🆕 07/2022 **Submitted** a paper (under review) about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW).  
+🆕 07/2022 **Submitted** a paper (under review) about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.  
 🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing😊.
 
 ---

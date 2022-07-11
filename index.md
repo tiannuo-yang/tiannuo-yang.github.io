@@ -1,14 +1,13 @@
 <img align="left" src="./personal_photo.JPG" width = '135' height ='135'>
 
-**Tiannuo Yang (杨天诺)**  
-Master Student  
+**Tiannuo Yang (杨天诺)**, Master Student  
 [Parallel and Distributed Software Technology Lab](https://nbjl.nankai.edu.cn/)   
 [College of Computer Science](https://encc.nankai.edu.cn/), [Nankai University](https://en.nankai.edu.cn/)
 
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 
-🆕 07/2022 **Submitted** a working paper about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.  
+🆕 07/2022 **Submitted** a paper (under review) about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW).  
 🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing😊.
 
 ---

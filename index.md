@@ -32,7 +32,7 @@ Advisor: Assoc Prof. [Yusen Li](https://liyusen-nku.github.io/)
 
 *2018.08-2022.06* BMgmt in Information Management and Information System  
 [University of Science and Technology Beijing](https://en.ustb.edu.cn/), Beijing, China.  
-GPA: 3.87/4.0
+GPA: 3.97/4.0
 
 *2019.09-2020.01* Exchange Program in Information Management  
 [Southern Taiwan University of Science and Technology](https://www.stust.edu.tw/en/), Taiwan, China.  

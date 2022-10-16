@@ -2,8 +2,9 @@
 
 **Tiannuo Yang (杨天诺)**  
 Master Student  
-[Parallel and Distributed Software Technology Lab](https://nbjl.nankai.edu.cn/)   
-[College of Computer Science](https://encc.nankai.edu.cn/), [Nankai University](https://en.nankai.edu.cn/)
+[Nankai-Baidu Joint Laboratory](https://nbjl.nankai.edu.cn/)   
+[College of Computer Science](https://encc.nankai.edu.cn/)
+[Nankai University](https://en.nankai.edu.cn/)
 
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 

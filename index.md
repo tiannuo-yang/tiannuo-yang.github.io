@@ -1,10 +1,9 @@
-<img align="left" src="./本科学士服.jpg" width = '118' height ='158'>
+<img align="left" src="./本科学士服.jpg" width = '101' height ='135'>
 
 **Tiannuo Yang (杨天诺)**  
 Master Student  
-[Nankai-Baidu Joint Laboratory](https://nbjl.nankai.edu.cn/)   
-[College of Computer Science](https://encc.nankai.edu.cn/)  
-[Nankai University](https://en.nankai.edu.cn/)
+[Parallel and Distributed Software Technology Lab](https://nbjl.nankai.edu.cn/)   
+[College of Computer Science](https://encc.nankai.edu.cn/), [Nankai University](https://en.nankai.edu.cn/)
 
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 

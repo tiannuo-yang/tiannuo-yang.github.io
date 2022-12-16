@@ -21,7 +21,8 @@ Before joining NKU, I received the BMgmt degree in Information Management and In
 ---
 #### RESEARCH INTERESTS
 
-**Online Learning** for Computer Systems & **Modeling Optimization** for Transportation Scheduling.
+- **Online Learning** in Computer Systems
+- **Combinatorial optimization Problems** and Heuristic Algorithms
 
 ---
 #### EDUCATION BACKGROUND

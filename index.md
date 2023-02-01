@@ -40,5 +40,5 @@ GPA: 3.97/4.0
 GPA: 4.0/4.0
 
 ---
-#### Publication
+#### PUBLICATION LIST
 Yang T, Chu Z & Wang B (2023). **Feasibility on the integration of passenger and freight transportation in rural areas: A service mode and an optimization model**. Under 1st Revision of [Socio-economic planning sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences).

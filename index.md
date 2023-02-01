@@ -8,7 +8,7 @@ Master Student
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 
-🆕 07/2022 **Submitted** a paper (under review) about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.  
+🆕 07/2022 **Submitted** a paper (under revision) about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.  
 🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing😊.
 
 ---
@@ -38,3 +38,7 @@ GPA: 3.97/4.0
 *2019.09-2020.01* Exchange Program in Information Management  
 [Southern Taiwan University of Science and Technology](https://www.stust.edu.tw/en/), Taiwan, China.  
 GPA: 4.0/4.0
+
+---
+#### Publication
+Yang T, Chu Z & Wang B (2023). **Feasibility on the integration of passenger and freight transportation in rural areas: A service mode and an optimization model**. Under 1st Revision of Socio-economic planning sciences.

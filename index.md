@@ -13,7 +13,7 @@ Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 ---
 #### BRIEF INTRO
-I am currently a master student of Computer Science at Nankai University (NKU) with Assoc Prof. [Yusen Li](https://liyusen-nku.github.io/) as my advisor. My research interest lies in **Learning Approaches in Computer Systems** in general. Particularly, I am recently focusing on **Collaborative Auto-Tuning and Resource Allocation** for complex applications. My research aims to design effective and autonomic architecture based on bandit related algorithm and provide extensive tradeoff for resource utilization and system performance.  
+I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://liyusen-nku.github.io/) as my advisor. My research interest lies in **Learning Approaches in Computer Systems** in general. Particularly, I am recently focusing on **Collaborative Auto-Tuning and Resource Allocation** for complex applications. My research aims to design effective and autonomic architecture based on bandit related algorithm and provide extensive tradeoff for resource utilization and system performance.  
 Before joining NKU, I received the BMgmt degree in Information Management and Information System from University of Science and Technology Beijing (USTB). My graduation thesis about vehicle routing optimization was further revised and submitted to Elsevier. I also participated in an one-year research project (i.e., Coordination and Optimization of Complex Systems Based on Deep Learning) in University of Chinese Academy of Sciences (UCAS) and studied data-driven time-dependent vehicle routing problems (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui?language=en)).
 
 <!-- https://www.cs.purdue.edu/homes/choi293/index.html -->
@@ -29,7 +29,7 @@ Before joining NKU, I received the BMgmt degree in Information Management and In
 
 *2022.08-Present* M.E. in Computer Science  
 [Nankai University](https://en.ustb.edu.cn/), Tianjin, China.  
-Advisor: Assoc Prof. [Yusen Li](https://liyusen-nku.github.io/)
+Advisor: Prof. [Yusen Li](https://liyusen-nku.github.io/)
 
 *2018.08-2022.06* BMgmt in Information Management and Information System  
 [University of Science and Technology Beijing](https://en.ustb.edu.cn/), Beijing, China.  
@@ -38,6 +38,12 @@ GPA: 3.97/4.0
 *2019.09-2020.01* Exchange Program in Information Management  
 [Southern Taiwan University of Science and Technology](https://www.stust.edu.tw/en/), Taiwan, China.  
 GPA: 4.0/4.0
+
+---
+#### INTERNSHIP PROJECTS
+*2023.03-Present* Academic Cooperation Intern
+[Ant Group](https://www.antgroup.com/en/), Beijing, China
+Summary: AI-driven optimization of DBMS.
 
 ---
 #### PUBLICATION LIST

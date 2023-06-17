@@ -41,8 +41,8 @@ GPA: 4.0/4.0
 
 ---
 #### INTERNSHIP PROJECTS
-*2023.03-Present* Academic Cooperation Intern
-[Ant Group](https://www.antgroup.com/en/), Beijing, China
+*2023.03-Present* Academic Cooperation Intern  
+[Ant Group](https://www.antgroup.com/en/), Beijing, China  
 Summary: AI-driven optimization of DBMS.
 
 ---

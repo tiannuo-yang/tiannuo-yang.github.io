@@ -8,7 +8,7 @@ Master Student
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 
-🆕 07/2022 **Submitted** a paper (under revision) about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.  
+<!-- 🆕 07/2022 **Submitted** a paper (under revision) about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.   -->
 🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing😊.
 
 ---
@@ -41,4 +41,6 @@ GPA: 4.0/4.0
 
 ---
 #### PUBLICATION LIST
-Yang T, Chu Z & Wang B (2023). **Feasibility on the integration of passenger and freight transportation in rural areas: A service mode and an optimization model**. Under 1st Revision of [Socio-economic planning sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences).
+**Yang T.**, Chen R., Li Y. Liu X, & Wang G. 2023. **CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning**. In [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP ’23).
+
+**Yang T.**, Chu Z., & Wang B. 2023. **Feasibility on the integration of passenger and freight transportation in rural areas: A service mode and an optimization model**. Under 2st Revision of [Socio-economic planning sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences).

@@ -41,6 +41,6 @@ GPA: 4.0/4.0
 
 ---
 #### PUBLICATION LIST
-**Yang T.**, Chen R., Li Y. Liu X, & Wang G. 2023. **CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning**. In [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP ’23).
+Yang T., Chen R., Li Y.\*, Liu X., & Wang G. 2023. CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning. In _[52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP ’23)_.
 
-**Yang T.**, Chu Z., & Wang B. 2023. **Feasibility on the integration of passenger and freight transportation in rural areas: A service mode and an optimization model**. Under 2st Revision of [Socio-economic planning sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences).
+Yang T.\*, Chu Z., & Wang B. 2023. Feasibility on the integration of passenger and freight transportation in rural areas: A service mode and an optimization model. Under 2st Revision of _[Socio-economic planning sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences)_.

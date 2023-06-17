@@ -41,6 +41,6 @@ GPA: 4.0/4.0
 
 ---
 #### PUBLICATION LIST
-Tiannuo Yang, Ruobing Chen, Yusen Li\*, Xiaoguang Liu, and Gang Wang. 2023. CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning. In [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP ’23).
+Tiannuo Yang, Ruobing Chen, Yusen Li\*, Xiaoguang Liu, and Gang Wang. 2023. CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning. In [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP '23).
 
-Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang. 2023. Feasibility on the integration of passenger and freight transportation in rural areas: A service mode and an optimization model. Under 2st Revision of [Socio-economic planning sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences).
+Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang. 2023. Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model. Under 2nd Revision of [Socio-economic Planning Sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences) (SCI, JCR Q1).

@@ -27,21 +27,21 @@ Before joining NKU, I received the BMgmt degree in Information Management and In
 ---
 #### EDUCATION BACKGROUND
 
-*2022.08-Present* &#x2003; M.E. in Computer Science  
+*2022.08-Present* &ensp; M.E. in Computer Science  
 [Nankai University](https://en.ustb.edu.cn/), Tianjin, China.  
 Advisor: Prof. [Yusen Li](https://liyusen-nku.github.io/)
 
-*2018.08-2022.06* &#x2003; BMgmt in Information Management and Information System  
+*2018.08-2022.06* &ensp; BMgmt in Information Management and Information System  
 [University of Science and Technology Beijing](https://en.ustb.edu.cn/), Beijing, China.  
 GPA: 3.97/4.0
 
-*2019.09-2020.01* &#x2003; Exchange Program in Information Management  
+*2019.09-2020.01* &ensp; Exchange Program in Information Management  
 [Southern Taiwan University of Science and Technology](https://www.stust.edu.tw/en/), Taiwan, China.  
 GPA: 4.0/4.0
 
 ---
 #### INTERNSHIP PROJECTS
-*2023.03-Present* &#x2003; Academic Cooperation Intern  
+*2023.03-Present* &ensp; Academic Cooperation Intern  
 [Ant Group](https://www.antgroup.com/en/), Beijing, China  
 Summary: AI-driven optimization of DBMS.
 

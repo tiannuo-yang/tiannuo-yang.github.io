@@ -1,9 +1,11 @@
 <img align="left" src="./本科学士服.jpg" width = '101' height ='135'>
 
 **Tiannuo Yang (杨天诺)**  
-Master Student  
+<!-- Master Student   -->
 [Parallel and Distributed Software Technology Lab](https://nbjl.nankai.edu.cn/)   
 [College of Computer Science](https://encc.nankai.edu.cn/), [Nankai University](https://en.nankai.edu.cn/)
+Tianjin, China
+
 
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
@@ -13,8 +15,10 @@ Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 ---
 #### BRIEF INTRO
-I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://liyusen-nku.github.io/) as my advisor. My research interest lies in **Learning Approaches in Computer Systems** in general. Particularly, I am recently focusing on **Collaborative Auto-Tuning and Resource Allocation** for complex applications. My research aims to design effective and autonomic architecture based on bandit related algorithm and provide extensive tradeoff for resource utilization and system performance.  
-Before joining NKU, I received the BMgmt degree in Information Management and Information System from University of Science and Technology Beijing (USTB). My graduation thesis about vehicle routing optimization was further revised and submitted to Elsevier. I also participated in an one-year research project (i.e., Coordination and Optimization of Complex Systems Based on Deep Learning) in University of Chinese Academy of Sciences (UCAS) and studied data-driven time-dependent vehicle routing problems (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui?language=en)).
+I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://liyusen-nku.github.io/) as my advisor. 
+My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on **collaborative optimization of both resource partitioning and parameter configuring**. My research aims to design an effective and automated optimization framework and provide extensive tradeoff between resource utilization and system performance.  
+Before joining NKU, I received my BMgmt degree in Information Management and Information System from University of Science and Technology Beijing (USTB). My graduation thesis about **vehicle routing optimization** was further revised and submitted to Elsevier. 
+I also participated in an one-year research project (i.e., Coordination and Optimization of Complex Systems Based on Deep Learning) in University of Chinese Academy of Sciences (UCAS), where I studied data-driven time-dependent vehicle routing problems and multi-objective heuristic algorithms (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui?language=en)).
 
 <!-- https://www.cs.purdue.edu/homes/choi293/index.html -->
 

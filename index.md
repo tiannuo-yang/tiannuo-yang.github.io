@@ -25,8 +25,8 @@ I also participated in an one-year research project (i.e., Coordination and Opti
 ---
 #### RESEARCH INTERESTS
 
-- **Online Learning** in Computer Systems
-- **Combinatorial Optimization Problems** and Heuristic Algorithms
+- Online learning in computer systems
+- Combinatorial optimization problems and heuristic algorithms
 
 ---
 #### EDUCATION BACKGROUND

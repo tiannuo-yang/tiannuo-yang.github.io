@@ -4,7 +4,7 @@
 <!-- Master Student   -->
 [Parallel and Distributed Software Technology Lab](https://nbjl.nankai.edu.cn/)   
 [College of Computer Science](https://encc.nankai.edu.cn/), [Nankai University](https://en.nankai.edu.cn/)  
-94 Weijin Road, Tianjin, China, 300071
+No.38 Tongyan Road, Jinnan District, Tianjin, China, 300350
 
 
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>

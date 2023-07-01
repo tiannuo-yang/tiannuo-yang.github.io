@@ -51,8 +51,8 @@ Summary: AI-driven optimization of DBMS.
 
 ---
 #### PUBLICATION LIST
-(Accepted) Tiannuo Yang, Ruobing Chen, Yusen Li\*, Xiaoguang Liu, and Gang Wang. 2023. 
-CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning. 
+(Accepted) Tiannuo Yang, Ruobing Chen, Yusen Li\*, Xiaoguang Liu, and Gang Wang. 2023.  
+CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning.  
 In [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP '23).
 
 Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang. 2023.  

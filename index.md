@@ -56,5 +56,5 @@ CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource 
 In [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP '23)
 
 Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang  
-[Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model](https://authors.elsevier.com/a/1hLQl8f9Z5hEl)  
+[Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775)  
 [Socio-Economic Planning Sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences) (2023) (SCI/SSCI, JCR Q1)

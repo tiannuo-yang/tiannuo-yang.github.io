@@ -32,22 +32,22 @@ I also participated in an one-year research project (i.e., Coordination and Opti
 #### EDUCATION BACKGROUND
 
 *2022.08-Present* &ensp; M.E. in Computer Science  
-[Nankai University](https://en.ustb.edu.cn/), Tianjin, China.  
+[Nankai University](https://en.ustb.edu.cn/), Tianjin, China  
 Advisor: Prof. [Yusen Li](https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm)
 
 *2018.08-2022.06* &ensp; BMgmt in Information Management and Information System  
-[University of Science and Technology Beijing](https://en.ustb.edu.cn/), Beijing, China.  
+[University of Science and Technology Beijing](https://en.ustb.edu.cn/), Beijing, China  
 GPA: 3.97/4.0
 
 *2019.09-2020.01* &ensp; Exchange Program in Information Management  
-[Southern Taiwan University of Science and Technology](https://www.stust.edu.tw/en/), Taiwan, China.  
+[Southern Taiwan University of Science and Technology](https://www.stust.edu.tw/en/), Taiwan, China  
 GPA: 4.0/4.0
 
 ---
 #### INTERNSHIP PROJECTS
 *2023.03-Present* &ensp; Academic Cooperation Intern  
 [Ant Group](https://www.antgroup.com/en/), Beijing, China  
-Summary: AI-driven optimization of DBMS.
+Summary: Learning-based optimization of industrial used DBMS
 
 ---
 #### PUBLICATION LIST

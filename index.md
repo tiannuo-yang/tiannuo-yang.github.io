@@ -10,7 +10,7 @@ No.38 Tongyan Road, Tianjin, China, 300350
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 🆕 06/2023 **Started** academic cooperation interning at Ant Group (Beijing)  
-🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing
+<!-- 🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing -->
 
 ---
 #### BRIEF INTRO

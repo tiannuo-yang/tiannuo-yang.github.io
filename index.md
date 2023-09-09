@@ -9,14 +9,13 @@ No.38 Tongyan Road, Tianjin, China, 300350
 
 Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
-<!-- 🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing. -->
-<!-- 🆕 07/2022 **Submitted** a paper (under revision) about [*optimization under integrated passenger and freight transportation*](https://github.com/tiannuo-yang/G-VRP-IPD-TW) to Elsevier.   -->
 🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing😊.
 
 ---
 #### BRIEF INTRO
 I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm) as my advisor. 
-My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on **collaborative optimization of both resource partitioning and parameter configuring**. My research aims to design an optimally efficient and scalable learning framework and provide extensive tradeoff between resource utilization and system performance.  
+My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on **optimizing the performance of vector database system** for scenearios like large language models and knowledge retrieval. My research aims to design an optimally efficient and scalable optimization framework and provide flexible tradeoff between search speed and recall rate.
+
 Before joining NKU, I received my BMgmt degree in Information Management and Information System from University of Science and Technology Beijing (USTB). My graduation thesis about **vehicle routing optimization** was further revised and submitted to Elsevier. 
 I also participated in an one-year research project (i.e., Coordination and Optimization of Complex Systems Based on Deep Learning) in University of Chinese Academy of Sciences (UCAS), where I studied data-driven time-dependent vehicle routing problems and multi-objective heuristic algorithms (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui?language=en)).
 
@@ -58,3 +57,9 @@ In [52nd International Conference on Parallel Processing](https://icpp23.sci.uta
 Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang  
 [Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775)  
 [Socio-Economic Planning Sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences) (2023) (SCI/SSCI, JCR Q1)
+
+---
+#### WORKING STUDIES
+Wenhao Yang, Tiannuo Yang, Yusen Li\*, Gang Wang and Xiaoguang Liu
+Efficient Multi-GPU Parallel Pipeline Rendering Architecture
+Submitted to [CCF ChinaSoft 2023](https://chinasoft.ccf.org.cn/)

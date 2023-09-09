@@ -50,9 +50,9 @@ Summary: AI-driven optimization of DBMS.
 
 ---
 #### PUBLICATION LIST
-(Accepted) Tiannuo Yang, Ruobing Chen, Yusen Li\*, Xiaoguang Liu, and Gang Wang  
+Tiannuo Yang, Ruobing Chen, Yusen Li\*, Xiaoguang Liu, and Gang Wang  
 CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning  
-In [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP '23)
+(Accepted) In [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP '23)
 
 Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang  
 [Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775)  
@@ -62,4 +62,4 @@ Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang
 #### WORKING STUDIES
 Wenhao Yang, Tiannuo Yang, Yusen Li\*, Gang Wang and Xiaoguang Liu  
 Efficient Multi-GPU Parallel Pipeline Rendering Architecture  
-Submitted to [CCF ChinaSoft 2023](https://chinasoft.ccf.org.cn/)
+(Submitted) to [CCF ChinaSoft 2023](https://chinasoft.ccf.org.cn/)

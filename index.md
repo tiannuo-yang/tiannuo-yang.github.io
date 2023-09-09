@@ -14,7 +14,7 @@ Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 ---
 #### BRIEF INTRO
 I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm) as my advisor. 
-My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on **optimizing the performance of vector database system** for scenearios like large language models and knowledge retrieval. My research aims to design an optimally efficient and scalable optimization framework and provide flexible tradeoff between search speed and recall rate.
+My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on **optimizing the performance of vector database systems** for scenearios like large language models and knowledge retrieval. My research aims to design an optimally efficient and scalable optimization framework and provide flexible tradeoff between search speed and recall rate.
 
 Before joining NKU, I received my BMgmt degree in Information Management and Information System from University of Science and Technology Beijing (USTB). My graduation thesis about **vehicle routing optimization** was further revised and submitted to Elsevier. 
 I also participated in an one-year research project (i.e., Coordination and Optimization of Complex Systems Based on Deep Learning) in University of Chinese Academy of Sciences (UCAS), where I studied data-driven time-dependent vehicle routing problems and multi-objective heuristic algorithms (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui?language=en)).
@@ -60,6 +60,6 @@ Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang
 
 ---
 #### WORKING STUDIES
-Wenhao Yang, Tiannuo Yang, Yusen Li\*, Gang Wang and Xiaoguang Liu
-Efficient Multi-GPU Parallel Pipeline Rendering Architecture
+Wenhao Yang, Tiannuo Yang, Yusen Li\*, Gang Wang and Xiaoguang Liu  
+Efficient Multi-GPU Parallel Pipeline Rendering Architecture  
 Submitted to [CCF ChinaSoft 2023](https://chinasoft.ccf.org.cn/)

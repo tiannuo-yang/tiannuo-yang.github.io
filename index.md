@@ -18,14 +18,14 @@ I am currently a master student of Computer Science at Nankai University (NKU) w
 My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on **optimizing the performance of vector database systems** for scenearios like large language models and knowledge retrieval. My research aims to design an optimally efficient and scalable optimization framework and provide flexible tradeoff between throuput and precision.
 
 Before joining NKU, I received my BMgmt degree in Information Management and Information System from University of Science and Technology Beijing (USTB). My graduation thesis about **vehicle routing optimization** was further revised and [published by Elsevier](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775). 
-I also participated in an one-year research project (i.e., Coordination and Optimization of Complex Systems Based on Deep Learning) in University of Chinese Academy of Sciences (UCAS), where I studied data-driven time-dependent vehicle routing problems and multi-objective heuristic algorithms (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui?language=en)).
+I also participated in an one-year research project (i.e., coordinate optimization of complex systems based on deep learning) in University of Chinese Academy of Sciences (UCAS), where I studied data-driven time-dependent vehicle routing problems and multi-objective heuristic algorithms (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui?language=en)).
 
 <!-- https://www.cs.purdue.edu/homes/choi293/index.html -->
 
 ---
 #### RESEARCH INTERESTS
 
-- Online learning for computer systems
+- Learning for computer systems
 - Combinatorial optimization problems and heuristic algorithms
 
 ---

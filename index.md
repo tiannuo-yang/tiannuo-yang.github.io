@@ -63,6 +63,7 @@ Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang
 #### ONGOING STUDIES
 Wenhao Yang, Tiannuo Yang, Yusen Li\*, Gang Wang and Xiaoguang Liu  
 Efficient Multi-GPU Parallel Pipeline Rendering Architecture  
+(高效的多 GPU 并行流水线渲染架构)  
 Submitted to [CCF ChinaSoft 2023](https://chinasoft.ccf.org.cn/)
 
 Tiannuo Yang, Wangqi Peng, Yusen Li, XX  

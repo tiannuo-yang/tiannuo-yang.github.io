@@ -34,40 +34,40 @@ I also participated in an one-year research project (i.e., coordinate optimizati
 ---
 #### EDUCATION BACKGROUND
 
-*2022.08-Present* &ensp; M.E. in Computer Science  
+*08/2022-Present* &ensp; M.E. in Computer Science  
 [Nankai University](https://en.ustb.edu.cn/), Tianjin, China  
 Advisor: Prof. [Yusen Li](https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm)
 
-*2018.08-2022.06* &ensp; BMgmt in Information Management and Information System  
+*08/2018-06/2022* &ensp; BMgmt in Information Management and Information System  
 [University of Science and Technology Beijing](https://en.ustb.edu.cn/), Beijing, China  
 GPA: 3.97/4.0
 
-*2019.09-2020.01* &ensp; Exchange Program in Information Management  
+*09/2019-01/2020* &ensp; Exchange Program in Information Management  
 [Southern Taiwan University of Science and Technology](https://www.stust.edu.tw/en/), Taiwan, China  
 GPA: 4.0/4.0
 
 ---
 #### INTERNSHIP PROJECTS
-*2023.03-Present* &ensp; Academic Cooperation Intern  
+*06/2023-Present* &ensp; Academic Cooperation Intern  
 [Ant Group](https://www.antgroup.com/en/), Beijing, China  
 Summary: Learning-based optimization of industrial used DBMS
 
 ---
 #### PUBLICATION LIST
-Tiannuo Yang, Ruobing Chen, Yusen Li\*, Xiaoguang Liu, and Gang Wang  
+**Tiannuo Yang**, Ruobing Chen, Yusen Li\*, Xiaoguang Liu, and Gang Wang  
 [CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning](https://dl.acm.org/doi/10.1145/3605573.3605578)  
 [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP '23)
 
-Tiannuo Yang\*, Zhongzhu Chu, and Bailin Wang  
+**Tiannuo Yang\***, Zhongzhu Chu, and Bailin Wang  
 [Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775)  
 [Socio-Economic Planning Sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences) (2023) (SCI/SSCI, JCR Q1)
 
 ---
 #### ONGOING STUDIES
-Wenhao Yang, Tiannuo Yang, Yusen Li\*, Gang Wang and Xiaoguang Liu  
+Wenhao Yang, **Tiannuo Yang**, Yusen Li\*, Gang Wang and Xiaoguang Liu  
 Efficient Multi-GPU Parallel Pipeline Rendering Architecture  
 (高效的多 GPU 并行流水线渲染架构)  
 Submitted to [CCF ChinaSoft 2023](https://chinasoft.ccf.org.cn/)
 
-Tiannuo Yang, Wangqi Peng, Yusen Li, XX  
+**Tiannuo Yang**, XX, XX, XX  
 Towards Auto-Configuring Distributed XX Database with High Search Speed and Recall Rate

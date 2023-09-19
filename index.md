@@ -11,7 +11,7 @@ Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 <!-- [📖](https://scholar.google.com/citations?user=TQFL5r4AAAAJ) -->
 
-😎 09/2023 **Got** my first academic citation (by [Cai et al., 2023](https://www.sciencedirect.com/science/article/pii/S0957417423021024)) in my life!  
+😎 09/2023 **Got** my first citation (by [Cai et al., 2023](https://www.sciencedirect.com/science/article/pii/S0957417423021024)) in my career!!!  
 🆕 06/2023 **Started** academic cooperation interning at Ant Group (Beijing)  
 <!-- 🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing -->
 

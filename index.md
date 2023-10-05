@@ -58,7 +58,7 @@ Summary: Learning-based optimization of industrial used DBMS
 [CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning](https://dl.acm.org/doi/10.1145/3605573.3605578)  
 [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP '23)
 
-**Tiannuo Yang\***, Zhongzhu Chu, and Bailin Wang  
+**Tiannuo Yang\***, [Zhongzhu Chu](https://zhongzhu-chu.github.io/), and Bailin Wang  
 [Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775)  
 [Socio-Economic Planning Sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences) (2023) (SCI/SSCI, JCR Q1)
 

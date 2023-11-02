@@ -30,6 +30,7 @@ I also participated in an one-year research project (i.e., coordinate optimizati
 
 - Learning for computer systems
 - Combinatorial optimization problems and heuristic algorithms
+- Bayesian optimization and reinforcement learning
 
 ---
 #### EDUCATION BACKGROUND

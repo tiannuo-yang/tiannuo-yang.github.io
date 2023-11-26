@@ -15,6 +15,8 @@ Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 🆕 06/2023 **Started** academic cooperation interning at Ant Group (Beijing)  
 <!-- 🆕 06/2022 **Graduated** officially from University of Science and Technology Beijing -->
 
+[Google Scholar](https://scholar.google.com/citations?user=TQFL5r4AAAAJ)  (DBLP)[https://dblp.org/pid/356/7972.html]  (ORCID)[https://orcid.org/my-orcid?orcid=0000-0001-5465-9626]  
+
 ---
 #### BRIEF INTRO
 I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm) as my advisor. 

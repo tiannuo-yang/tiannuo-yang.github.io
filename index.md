@@ -57,6 +57,10 @@ Summary: Learning-based optimization of industrial used DBMS
 
 ---
 #### PUBLICATION LIST
+..., **Tiannuo Yang** (Co-first Author), ... and Xiaodong Zeng\*  
+[On the Opportunities of Green Computing: A Survey](https://arxiv.org/abs/2311.00447)  
+[arXiv](https://arxiv.org/) (2023) (Writing Section: 6.1 Resource Optimization)
+
 **Tiannuo Yang**, Ruobing Chen, Yusen Li\*, Xiaoguang Liu, and Gang Wang  
 [CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning](https://dl.acm.org/doi/10.1145/3605573.3605578)  
 [52nd International Conference on Parallel Processing](https://icpp23.sci.utah.edu/) (ICPP '23)
@@ -64,10 +68,6 @@ Summary: Learning-based optimization of industrial used DBMS
 **Tiannuo Yang\***, [Zhongzhu Chu](https://zhongzhu-chu.github.io/), and Bailin Wang  
 [Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775)  
 [Socio-Economic Planning Sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences) (2023) (SCI/SSCI, JCR Q1)
-
-..., **Tiannuo Yang** (Co-first Author), ... and Xiaodong Zeng\*  
-[On the Opportunities of Green Computing: A Survey](https://arxiv.org/abs/2311.00447)  
-[arXiv](https://arxiv.org/) (2023) (Writing Section: 6.1 Resource Optimization)
 
 ---
 #### ONGOING STUDIES

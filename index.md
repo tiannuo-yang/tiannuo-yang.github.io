@@ -20,7 +20,7 @@ Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 ---
 #### BRIEF INTRO
 I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm) as my advisor. 
-My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on **optimizing the performance of vector database systems** for scenearios like large language models and knowledge retrieval. My research aims to design an optimally efficient and scalable optimization framework and provide flexible tradeoff between throuput and precision.
+My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on optimizing the performance of large language models (LLMs) infrastructure - vector data management systems (VDMSs). My research aims to automatically configure VDMSs and actively strike the balance between achieving high throuput and precision.
 
 Before joining NKU, I received my BMgmt degree in Information Management and Information System from University of Science and Technology Beijing (USTB). My graduation thesis about **vehicle routing optimization** was further revised and [published by Elsevier](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775). 
 I also participated in an one-year research project (i.e., coordinate optimization of complex systems based on deep learning) in University of Chinese Academy of Sciences (UCAS), where I studied data-driven time-dependent vehicle routing problems and multi-objective heuristic algorithms (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui?language=en)).
@@ -53,7 +53,7 @@ GPA: 4.0/4.0
 #### INTERNSHIP PROJECTS
 *06/2023-Present* &ensp; Academic Cooperation Intern  
 [Ant Group](https://www.antgroup.com/en/), Beijing, China  
-Summary: Learning-based optimization of industrial used DBMS
+Summary: Learning-based optimization of industrial used databases
 
 ---
 #### PUBLICATION LIST
@@ -76,4 +76,4 @@ Efficient Multi-GPU Parallel Pipeline Rendering Architecture (高效的多 GPU �
 Submitted to [CCF ChinaSoft 2023](https://chinasoft.ccf.org.cn/)
 
 **Tiannuo Yang**, XX, XX, XX  
-Towards Auto-Configuring Distributed XX Database with High Search Speed and Recall Rate
+VDTuner: Automated Performance Tuning for Vector Data Management Systems

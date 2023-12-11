@@ -71,8 +71,8 @@ Summary: Learning-based optimization of industrial used databases
 
 ---
 #### ONGOING STUDIES
-**Tiannuo Yang**, XX, XX, XX  
-VDTuner: Automated Performance Tuning for Vector Data Management Systems
+**Tiannuo Yang**, Wen Hu, Wangqi Peng, Yusen Li\*, Jianguo Li\*, Gang Wang, and Xiaoguang Liu  
+VDTuner: Automated Performance Tuning for Vector Data Management Systems  
 Submitted to [ICDE 2024](https://icde2024.github.io/CFP_research.html)
 
 Wenhao Yang, **Tiannuo Yang**, Yusen Li\*, Gang Wang and Xiaoguang Liu  

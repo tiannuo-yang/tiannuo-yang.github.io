@@ -31,8 +31,8 @@ I also participated in an one-year research project (i.e., coordinate optimizati
 #### RESEARCH INTERESTS
 
 - Learning for computer systems
-- Combinatorial optimization problems and heuristic algorithms
 - Bayesian optimization and reinforcement learning
+- Combinatorial optimization problems and heuristic algorithms
 
 ---
 #### EDUCATION BACKGROUND
@@ -71,9 +71,10 @@ Summary: Learning-based optimization of industrial used databases
 
 ---
 #### ONGOING STUDIES
+**Tiannuo Yang**, XX, XX, XX  
+VDTuner: Automated Performance Tuning for Vector Data Management Systems
+Submitted to [ICDE 2024](https://icde2024.github.io/CFP_research.html)
+
 Wenhao Yang, **Tiannuo Yang**, Yusen Li\*, Gang Wang and Xiaoguang Liu  
 Efficient Multi-GPU Parallel Pipeline Rendering Architecture (高效的多 GPU 并行流水线渲染架构)  
 Submitted to [CCF ChinaSoft 2023](https://chinasoft.ccf.org.cn/)
-
-**Tiannuo Yang**, XX, XX, XX  
-VDTuner: Automated Performance Tuning for Vector Data Management Systems

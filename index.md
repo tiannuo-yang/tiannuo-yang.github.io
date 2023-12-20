@@ -1,3 +1,11 @@
+<head>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+    }
+  </style>
+</head>
+
 <img align="left" src="./本科学士服.jpg" width = '101' height ='135'>
 
 **Tiannuo Yang (杨天诺)**  

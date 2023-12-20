@@ -1,10 +1,4 @@
-<head>
-  <style>
-    body {
-      font-family: "Arial", sans-serif;
-    }
-  </style>
-</head>
+<font face="Arial">
 
 <img align="left" src="./本科学士服.jpg" width = '101' height ='135'>
 

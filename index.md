@@ -1,5 +1,3 @@
-<font face="Arial"> Hi Arial </font>
-
 <img align="left" src="./本科学士服.jpg" width = '101' height ='135'>
 
 **Tiannuo Yang (杨天诺)**  
@@ -21,6 +19,9 @@ Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 ---
 #### BRIEF INTRO
+
+<font face="Arial"> Hi Arial </font>
+
 I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm) as my advisor. 
 My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on optimizing the performance of large language models (LLMs) infrastructure - vector data management systems (VDMSs). My research aims to automatically configure VDMSs and actively strike the balance between achieving high throuput and precision.
 

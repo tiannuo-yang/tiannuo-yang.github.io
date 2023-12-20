@@ -19,13 +19,11 @@ Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 ---
 #### BRIEF INTRO
-<font face="Arial">
 I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm) as my advisor. 
 My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on optimizing the performance of large language models (LLMs) infrastructure - vector data management systems (VDMSs). My research aims to automatically configure VDMSs and actively strike the balance between achieving high throuput and precision.
 
 Before joining NKU, I received my BMgmt degree in Information Management and Information System from University of Science and Technology Beijing (USTB). My graduation thesis about **vehicle routing optimization** was further revised and [published by Elsevier](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775). 
 I also participated in an one-year research project (i.e., coordinate optimization of complex systems based on deep learning) in University of Chinese Academy of Sciences (UCAS), where I studied data-driven time-dependent vehicle routing problems and multi-objective heuristic algorithms (advised by Prof. [Guanghui Zhou](https://people.ucas.ac.cn/~zhouguanghui?language=en)).
-</font>
 
 <!-- https://www.cs.purdue.edu/homes/choi293/index.html -->
 

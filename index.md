@@ -27,14 +27,14 @@ I also participated in an one-year research project (i.e., coordinate optimizati
 
 <!-- https://www.cs.purdue.edu/homes/choi293/index.html -->
 
----
+
 #### RESEARCH INTERESTS
 
 - Learning for computer systems
 - Bayesian optimization and reinforcement learning
 - Combinatorial optimization problems and heuristic algorithms
 
----
+
 #### EDUCATION BACKGROUND
 
 *08/2022-Present* &ensp; M.E. in Computer Science  
@@ -49,13 +49,13 @@ GPA: 3.97/4.0
 [Southern Taiwan University of Science and Technology](https://www.stust.edu.tw/en/), Taiwan, China  
 GPA: 4.0/4.0
 
----
+
 #### INTERNSHIP PROJECTS
 *06/2023-Present* &ensp; Academic Cooperation Intern  
 [Ant Group](https://www.antgroup.com/en/), Beijing, China  
 Summary: Learning-based optimization of industrial used databases
 
----
+
 #### PUBLICATION LIST
 ..., **Tiannuo Yang** (Co-First Author), ... and Xiaodong Zeng\*  
 [On the Opportunities of Green Computing: A Survey](https://arxiv.org/abs/2311.00447)  
@@ -69,7 +69,7 @@ Summary: Learning-based optimization of industrial used databases
 [Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model](https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775)  
 [Socio-Economic Planning Sciences](https://www.sciencedirect.com/journal/socio-economic-planning-sciences) (2023) (SCI/SSCI, JCR Q1)
 
----
+
 #### ONGOING STUDIES
 **Tiannuo Yang**, Wen Hu, Wangqi Peng, Yusen Li\*, Jianguo Li\*, Gang Wang, and Xiaoguang Liu  
 [VDTuner: Automated Performance Tuning for Vector Data Management Systems](https://github.com/tiannuo-yang/VDTuner)  

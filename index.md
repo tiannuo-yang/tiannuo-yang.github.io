@@ -1,5 +1,6 @@
 <img align="left" src="./本科学士服.jpg" width = '101' height ='135'>
 
+<font face="Arial">
 **Tiannuo Yang (杨天诺)**  
 <!-- Master Student   -->
 [Parallel and Distributed Software Technology Lab](https://nbjl.nankai.edu.cn/)   
@@ -19,9 +20,6 @@ Email: <tiannuo_yang@126.com>; <yangtn@nbjl.nankai.edu.cn>
 
 ---
 #### BRIEF INTRO
-
-<font face="Arial"> Hi Arial </font>
-
 I am currently a master student of Computer Science at Nankai University (NKU) with Prof. [Yusen Li](https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm) as my advisor. 
 My research interest lies in **learning approaches for computer systems**. Particularly, I am recently focusing on optimizing the performance of large language models (LLMs) infrastructure - vector data management systems (VDMSs). My research aims to automatically configure VDMSs and actively strike the balance between achieving high throuput and precision.
 
@@ -81,3 +79,5 @@ Submitted to [ICDE 2024](https://icde2024.github.io/CFP_research.html)
 Wenhao Yang, **Tiannuo Yang**, Yusen Li\*, Gang Wang and Xiaoguang Liu  
 Efficient Multi-GPU Parallel Pipeline Rendering Architecture (高效的多 GPU 并行流水线渲染架构)  
 Submitted to [CCF ChinaSoft 2023](https://chinasoft.ccf.org.cn/)
+
+</font>

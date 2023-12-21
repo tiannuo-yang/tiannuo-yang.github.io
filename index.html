@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="figures/ytn_logo2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tiannuo Yang</title>
+    <style>
+        body {
+            font-family: 'Lato', Tahoma, Comic Sans MS, Verdana, sans-serif, Georgia;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-container {
+            max-width: 850px;
+            /* 可以根据需要调整这个值 */
+            margin: 20px;
+            padding: 20px;
+            word-break: break-word;
+            font-size: 10pt;
+        }
+
+        .container {
+            display: flex;
+            margin: 0;
+            a {
+                text-decoration: none;
+                color: #0070C0;
+            }
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-column {
+            margin-top: 15px;
+            text-align: center;
+            width: 22%;
+            padding: 20px;
+            line-height: 20px;
+        }
+
+        .right-column {
+            width: 78%;
+            padding: 20px;
+            line-height: 18px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .profile-photo {
+            max-width: 120px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .publication {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .publication img {
+            max-width: 140px;
+            height: auto;
+            margin-right: 10px;
+            /* border: 0.5px solid grey; */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* border-radius: 5px; */
+        }
+
+        .publication-text {
+            flex-grow: 1;
+        }
+
+        .education ul {
+            padding: 0;
+        }
+
+        .education li {
+            /* list-style-type: circle; */
+            margin-bottom: 5px;
+            margin-left: 20px;
+        }
+
+        .footer-text { /* 新增样式 */
+            text-align: center; /* 文本居中 */
+            margin-top: 20px; /* 与主容器保持一定距离 */
+            max-width: 850px; /* 最大宽度与主容器相同 */
+            margin-left: auto; /* 左右自动外边距实现居中 */
+            margin-right: auto;
+            /* display: flex; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="left-column">
+                <img src="figures/photo.png" alt="My Photo" class="profile-photo" />
+                <p>
+                    <!-- <img src="figures/ytn_logo2.png" height="25px" /> <br> -->
+                    <font size="3"> <b>Tiannuo Yang (杨天诺)</b></font> 
+                </p> 
+                <p>Master Student <br>
+                    Nankai University <br>
+                    yangtn@nbjl.nankai.edu.cn</p>
+                <p>
+                    <a href="https://github.com/tiannuo-yang" target="_blank">
+                        <img src="figures/github.svg" type="image/svg+xml" height="20px" /> &nbsp;&nbsp; </a>
+                    <a href="https://scholar.google.com/citations?user=TQFL5r4AAAAJ" target="_blank">
+                        <img src="figures/scholar.svg" type="image/svg+xml" height="20px" /> &nbsp;&nbsp; </a>
+                    <a href="https://dblp.org/pid/356/7972.html" target="_blank">
+                        <img src="figures/dblp.svg" type="image/svg+xml" height="20px" /> &nbsp;&nbsp; </a>
+                    <a href="https://orcid.org/my-orcid?orcid=0000-0001-5465-9626" target="_blank">
+                        <img src="figures/orcid.svg" type="image/svg+xml" height="20px" /> &nbsp;&nbsp; </a>
+                </p>
+            </div>
+
+            <div class="right-column">
+                <div class="section">
+                    <h3>Short Bio</h3>
+                    <p>
+                        Tiannuo Yang is a master student of <a href="https://nbjl.nankai.edu.cn/" target="_blank">NBJL</a>, College of
+                        Computer Science, Nankai University, under the supervision of <a
+                            href="https://cc.nankai.edu.cn/2021/0323/c13619a516700/page.htm" target="_blank"> Prof. Yusen Li </a>.
+                        He received the B.E. degree from University of Science and Technology Beijing (USTB) in 2022.
+                        His research lies at the intersection of computer systems and machine learning – with a
+                        particular
+                        focus on automated performance tuning.
+                    </p>
+                </div>
+
+                <div class="section education">
+                    <h3>News</h3>
+                    <ul>
+                        <li>[Sep. 2023] Got the first citation (by <a href="https://www.sciencedirect.com/science/article/pii/S0957417423021024" target="_blank">Cai et al., 2023</a>) in my career! </li>
+                        <li>[Sep. 2023] Published a collaborative survey about green computing. </li>
+                        <li>[July 2023] Started academic internship at Ant Group (Beijing). </li>
+                        <li>[June 2023] One paper about performance tuning is accepted by <a href="https://icpp23.sci.utah.edu/" target="_blank"> ICPP 2023</a>. </li>
+                        <li>[June 2023] Undergraduate thesis about operations research is accepted by <a href="https://www.sciencedirect.com/journal/socio-economic-planning-sciences" target="_blank">SEPS</a>.</li>
+                        <li>[Dec. 2022] Won the <a href="https://github.com/SynodicMonth/SSScheduler" target="_blank">3rd prize</a> in <a href="https://competition.huaweicloud.com/information/1000041752/introduction" target="_blank">Massive Storage Competition</a> (organizer: Huawei).</li>
+                    </ul>
+
+                </div>
+
+                <div class="section">
+                    <h3>Publications</h3>
+                    <h4>[Performance Tuning]</h4>
+                    <div class="publication">
+                        <img src="figures/vdtuner.png" />
+                        <div class="publication-text">
+                            <p>
+                                <font color="#0000FF">
+                                    VDTuner: Automated Performance Tuning for Vector Data Management Systems
+                                </font><br>
+                                T Yang, <font color="#7F7F7F"> W Hu, W Peng, Y Li <embed src="figures/corresponding.svg"
+                                        type="image/svg+xml" height="10px" />, J Li <embed src="figures/corresponding.svg"
+                                        type="image/svg+xml" height="10px" />, X Liu, G Wang </font> <br>
+                                <i> Working Paper</i>, 2023<br>
+                                PDF | <a href="https://github.com/tiannuo-yang/VDTuner" target="_blank"> Code </a> | BibTex 
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="publication">
+                        <img src="figures/cotuner2.png" />
+                        <div class="publication-text">
+                            <p>
+                                <font color="#0000FF">
+                                    CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource
+                                    Partitioning and Parameter Tuning
+                                </font><br>
+                                T Yang, <font color="#7F7F7F"> R Chen, Y Li <embed src="figures/corresponding.svg"
+                                        type="image/svg+xml" height="10px" />, X Liu, G Wang </font> <br>
+                                <i> International Conference on Parallel Processing (ICPP)</i>, 2023 <br>
+                                <a href="https://dl.acm.org/doi/10.1145/3605573.3605578" target="_blank"> PDF </a> | <a href="bib\cotuner.html" target="_blank"> BibTex </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <h4>[Operations Research]</h4>
+                    <div class="publication">
+                        <img src="figures/seps.jpg" />
+                        <div class="publication-text">
+                            <p>
+                                <font color="#0000FF">
+                                    Feasibility on the Integration of Passenger and Freight Transportation in Rural
+                                    Areas: A
+                                    Service Mode and an Optimization Model
+                                </font><br>
+                                T Yang <embed src="figures/corresponding.svg" type="image/svg+xml" height="10px" />,
+                                <font color="#7F7F7F"> Z Chu, B Wang </font><br>
+                                <i> Socio-Economic Planning Sciences (SCI/SSCI, JCR Q1)</i>, 2023 <br>
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775" target="_blank"> PDF
+                                </a> | <a href="https://github.com/tiannuo-yang/G-VRP-IPD-TW" target="_blank"> Data </a> | <a href="bib/seps.html" target="_blank"> BibTex </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <h4>[Others]</h4>
+                    <div class="publication">
+                        <img src="figures/gpuRender.png"/>
+                        <div class="publication-text">
+                            <p>
+                                <font color="#0000FF">
+                                    Efficient Multi-GPU Parallel Pipeline Rendering Architecture <br>
+                                    (高效的多 GPU 并行流水线渲染架构)
+                                </font><br>
+                                <font color="#7F7F7F">W Yang,</font> T Yang, <font color="#7F7F7F">Y Li <embed src="figures/corresponding.svg"
+                                type="image/svg+xml" height="10px" />, X Liu, G Wang</font> <br>
+                                <i> Working Paper</i>, 2023 <br>
+                                PDF | BibTex
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="publication">
+                        <img src="figures/survey.jpg" />
+                        <div class="publication-text">
+                            <p>
+                                <font color="#0000FF">
+                                    On the Opportunities of Green Computing: A Survey
+                                </font><br>
+                                <font color="#7F7F7F">Y Zhou, …,</font> T Yang (Co-First Author), … <font
+                                    color="#7F7F7F"> and X Zeng <embed src="figures/corresponding.svg"
+                                        type="image/svg+xml" height="10px" /> </font> <br>
+                                <i> arXiv preprint</i>, 2023 <br>
+                                <a href="https://arxiv.org/abs/2311.00447" target="_blank"> PDF </a> | <a href="bib/survey.html" target="_blank"> BibTex </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 更多出版物 -->
+
+                    
+                </div>
+
+                <div class="section education">
+                    <h3>Education</h3>
+                    <!-- <h4>M.E. in Computer Science</h4>
+                    [Aug. 2022 - Present] Nankai University, Tianjin, China.
+
+                    <h4>B.E. in Information Management and Information System</h4>
+                    [Aug. 2018 - June 2022] University of Science and Technology Beijing, Beijing, China.
+
+                    <h4>Exchange Program in Information Management</h4>
+                    [Sep. 2019 - Jan. 2020] Southern Taiwan University of Science and Technology, Taiwan, China. -->
+
+                    <ul>
+                        <li>[Aug. 2022 - Present] M.E. in Computer Science, <a href="https://en.nankai.edu.cn/" target="_blank">Nankai University</a>.</li>
+                        <li>[Aug. 2018 - June 2022] B.E. in Information Management and Information System, <a href="https://en.ustb.edu.cn/" target="_blank">University of Science and Technology Beijing</a> (GPA: 3.97/4.0).</li>
+                        <li>[Sep. 2019 - Jan. 2020] Exchange Program in Information Management, <a href="https://www.stust.edu.tw/en/" target="_blank">Southern Taiwan University of Science and Technology</a> (GPA: 4.0/4.0).</li>
+                    </ul>
+                </div>
+
+                <div class="section education">
+                    <h3>Internship</h3>
+                    <ul>
+                        <li>[June 2023 - Present] Academic Internship, <a href="https://www.antgroup.com/en/" target="_blank">Ant Group</a>, Beijing, China.</li>
+                    </ul>
+                </div>
+
+                <div class="section education">
+                    <h3>Honors & Awards</h3>
+                    <ul>
+                        <li> 1st-Class Gongneng Scholarship (bonus: 12,000 yuan, top 10%), Nankai University, 2023.</li>
+                        <li> National 3rd Prize, <a href="https://competition.huaweicloud.com/information/1000041752/introduction" target="_blank">Massive Storage Competition</a>, Huawei, 2022. </li>
+                        <li> Provincial (Tianjin) Gold Prize, <a href="http://en.moe.gov.cn/news/press_releases/202110/t20211021_574088.html" target="_blank">'Internet+' Innovation and Entrepreneurship Competition</a>, 2021</li>
+                        <li> Excellent Merit Student (top 8%), University of Science and Technology Beijing, 2020.</li>
+                        <li> National 2nd Prize (top 2% - 4%), <a href="http://en.mcm.edu.cn/" target="_blank">Contemporary Undergraduate Mathematical Contest in Modeling</a>, 2020.</li>
+                        <li> Top 10 singers on Campus, University of Science and Technology Beijing, 2020.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    
+        <div class="footer-text">
+            <img src="figures/earth2.gif" style="margin-top: -25px; margin-bottom: -20px; height: 100px;"/>
+            <p>© Tiannuo Yang | Last updated: Dec. 2023</p>
+        </div>
+    </div>
+    
+
+
+</body>
+
+</html>

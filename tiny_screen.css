@@ -26,32 +26,29 @@ a {
     max-width: 100%;
     /* 可以根据需要调整这个值 */
     margin: 0;
-    padding: 2%;
+    padding: 1.5%;
     word-break: break-word;
-    font-size: 100%;
+    font: size 10pt;
 }
 
 .container {
-    display:contents;
+    display: flex;
     margin: 0;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-left: 2%;
-    margin-right: 2%;
 }
 
 .left-column {
-    margin-top: 0%;
+    margin-top: 1.5%;
     text-align: center;
-    width: 100%;
-    padding: 0%;
+    width: 24%;
+    padding: 2%;
     line-height: 140%;
-    border-bottom: solid 1px #e1e1e1;
 }
 
 .right-column {
-    width: 100%;
-    /* padding: 2%; */
+    width: 76%;
+    padding: 2%;
     /* line-height: 18px; */
 }
 
@@ -60,19 +57,19 @@ a {
 }
 
 .profile-photo {
-    width: 25%;
-    height: auto;
+    width: 65%;
+    /* height: auto; */
     border-radius: 50%;
 }
 
 .publication {
     display: flex;
     align-items: center;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 .publication img {
-    width: 24%;
+    width: 150px;
     height: auto;
     margin-right: 1.5%;
     /* border: 0.5px solid grey; */
@@ -98,9 +95,9 @@ a {
     /* 新增样式 */
     text-align: center;
     /* 文本居中 */
-    /* margin-top: 2.5%; */
+    margin-top: 2.5%;
     /* 与主容器保持一定距离 */
-    max-width: 68%;
+    max-width: 70%;
     /* 最大宽度与主容器相同 */
     margin-left: auto;
     /* 左右自动外边距实现居中 */
@@ -109,7 +106,7 @@ a {
 }
 
 .footer-text img{
-    margin-top: -3%; 
-    margin-bottom: -2.8%; 
+    margin-top: -4%; 
+    margin-bottom: -3.8%; 
     width: 15%;
 }

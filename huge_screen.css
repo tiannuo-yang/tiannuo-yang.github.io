@@ -8,6 +8,11 @@
     src: url("./fonts/Lato/Lato-Italic.ttf");
 }
 
+@font-face {
+    font-family: "Lora";
+    src: url("./fonts/Lora/Lora-VariableFont_wght.ttf");
+}
+
 body {
     font-family: 'Lato', Tahoma, Comic Sans MS, Verdana, sans-serif, Georgia;
     margin: 0;
@@ -23,12 +28,12 @@ a {
 }
 
 .main-container {
-    max-width: 68%;
+    max-width: 850px;
     /* 可以根据需要调整这个值 */
     margin: 0;
-    padding: 2%;
+    padding: 1.5%;
     word-break: break-word;
-    font-size: 100%;
+    font: size 10pt;
 }
 
 .container {
@@ -39,15 +44,15 @@ a {
 }
 
 .left-column {
-    margin-top: 2%;
+    margin-top: 1.5%;
     text-align: center;
-    width: 22%;
+    width: 24%;
     padding: 2%;
     line-height: 140%;
 }
 
 .right-column {
-    width: 78%;
+    width: 76%;
     padding: 2%;
     /* line-height: 18px; */
 }
@@ -58,18 +63,18 @@ a {
 
 .profile-photo {
     width: 65%;
-    height: auto;
+    /* height: auto; */
     border-radius: 50%;
 }
 
 .publication {
     display: flex;
     align-items: center;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 .publication img {
-    width: 24%;
+    width: 150px;
     height: auto;
     margin-right: 1.5%;
     /* border: 0.5px solid grey; */
@@ -97,7 +102,7 @@ a {
     /* 文本居中 */
     margin-top: 2.5%;
     /* 与主容器保持一定距离 */
-    max-width: 68%;
+    max-width: 70%;
     /* 最大宽度与主容器相同 */
     margin-left: auto;
     /* 左右自动外边距实现居中 */
@@ -106,7 +111,7 @@ a {
 }
 
 .footer-text img{
-    margin-top: -3%; 
-    margin-bottom: -2.8%; 
+    margin-top: -4%; 
+    margin-bottom: -3.8%; 
     width: 15%;
 }

@@ -3,106 +3,11 @@
 
 <head>
     <link rel="icon" href="figures/ytn_logo2.png">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:1200px)" href="tiny_screen.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:1200px)" href="huge_screen.css" />
+
     <title>Tiannuo Yang</title>
-    <style>
-        body {
-            font-family: 'Lato', Tahoma, Comic Sans MS, Verdana, sans-serif, Georgia;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: rgba(0, 112, 192, 1);
-        }
-
-        .main-container {
-            max-width: 1000px;
-            /* 可以根据需要调整这个值 */
-            margin: 15px;
-            padding: 15px;
-            word-break: break-word;
-            font-size: 12pt;
-        }
-
-        .container {
-            display: flex;
-            margin: 0;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .left-column {
-            margin-top: 15px;
-            text-align: center;
-            width: 22%;
-            padding: 15px;
-            line-height: 22px;
-        }
-
-        .right-column {
-            width: 78%;
-            padding: 15px;
-            /* line-height: 18px; */
-        }
-
-        .section {
-            margin-bottom: 20px;
-        }
-
-        .profile-photo {
-            width: 120px;
-            height: auto;
-            border-radius: 50%;
-        }
-
-        .publication {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .publication img {
-            width: 140px;
-            height: auto;
-            margin-right: 10px;
-            /* border: 0.5px solid grey; */
-            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-            /* border-radius: 5px; */
-        }
-
-        .publication-text {
-            flex-grow: 1;
-        }
-
-        .education ul {
-            padding: 0;
-        }
-
-        .education li {
-            /* list-style-type: circle; */
-            margin-bottom: 5px;
-            margin-left: 20px;
-        }
-
-        .footer-text {
-            /* 新增样式 */
-            text-align: center;
-            /* 文本居中 */
-            margin-top: 20px;
-            /* 与主容器保持一定距离 */
-            max-width: 850px;
-            /* 最大宽度与主容器相同 */
-            margin-left: auto;
-            /* 左右自动外边距实现居中 */
-            margin-right: auto;
-            /* display: flex; */
-        }
-    </style>
 </head>
 
 <body>
@@ -113,7 +18,7 @@
                 <img src="figures/photo.png" alt="My Photo" class="profile-photo" />
                 <p>
                     <!-- <img src="figures/ytn_logo2.png" height="25px" /> <br> -->
-                    <font size="4"> <b>Tiannuo Yang (杨天诺)</b></font>
+                    <h3>Tiannuo Yang (杨天诺)</h3>
                 </p>
                 <p>Master Student <br>
                     Nankai University <br>
@@ -179,7 +84,7 @@
                                         type="image/svg+xml" height="10px" />, J Li <embed
                                         src="figures/corresponding.svg" type="image/svg+xml" height="10px" />, X Liu, G
                                     Wang </font> <br>
-                                <i> Working Paper</i>, 2023<br>
+                                <font style="font-family: Lato_italic;">Working Paper</font>, 2023<br>
                                 PDF | <a href="https://github.com/tiannuo-yang/VDTuner" target="_blank"> Code </a> |
                                 BibTex
 
@@ -197,7 +102,7 @@
                                 </font><br>
                                 T Yang, <font color="#7F7F7F"> R Chen, Y Li <embed src="figures/corresponding.svg"
                                         type="image/svg+xml" height="10px" />, X Liu, G Wang </font> <br>
-                                <i> International Conference on Parallel Processing (ICPP)</i>, 2023 <br>
+                                <font style="font-family: Lato_italic;">International Conference on Parallel Processing (ICPP)</font>, 2023 <br>
                                 <a href="https://dl.acm.org/doi/10.1145/3605573.3605578" target="_blank"> PDF </a> | <a
                                     href="bib\cotuner.html" target="_blank"> BibTex </a>
                             </p>
@@ -214,7 +119,7 @@
                                 </font><br>
                                 T Yang <embed src="figures/corresponding.svg" type="image/svg+xml" height="10px" />,
                                 <font color="#7F7F7F"> Z Chu, B Wang </font><br>
-                                <i> Socio-Economic Planning Sciences (SCI/SSCI, JCR Q1)</i>, 2023 <br>
+                                <font style="font-family: Lato_italic;">Socio-Economic Planning Sciences (SCI/SSCI, JCR Q1)</font>, 2023 <br>
                                 <a href="https://www.sciencedirect.com/science/article/abs/pii/S0038012123001775"
                                     target="_blank"> PDF
                                 </a> | <a href="https://github.com/tiannuo-yang/G-VRP-IPD-TW" target="_blank"> Data </a>
@@ -235,7 +140,7 @@
                                 <font color="#7F7F7F">W Yang,</font> T Yang, <font color="#7F7F7F">Y Li <embed
                                         src="figures/corresponding.svg" type="image/svg+xml" height="10px" />, X Liu, G
                                     Wang</font> <br>
-                                <i> Working Paper</i>, 2023 <br>
+                                <font style="font-family: Lato_italic;">Working Paper</font>, 2023 <br>
                                 PDF | BibTex
                             </p>
                         </div>
@@ -251,7 +156,7 @@
                                 <font color="#7F7F7F">Y Zhou, …,</font> T Yang (Co-First Author), … <font
                                     color="#7F7F7F"> and X Zeng <embed src="figures/corresponding.svg"
                                         type="image/svg+xml" height="10px" /> </font> <br>
-                                <i> arXiv preprint</i>, 2023 <br>
+                                <font style="font-family: Lato_italic;">arXiv preprint</font>, 2023 <br>
                                 <a href="https://arxiv.org/abs/2311.00447" target="_blank"> PDF </a> | <a
                                     href="bib/survey.html" target="_blank"> BibTex </a>
                             </p>
@@ -307,7 +212,7 @@
         </div>
 
         <div class="footer-text">
-            <img src="figures/earth2.gif" style="margin-top: -25px; margin-bottom: -20px; height: 100px;" />
+            <img src="figures/earth2.gif" />
             <p>© Tiannuo Yang | Last updated: Dec. 2023</p>
         </div>
     </div>

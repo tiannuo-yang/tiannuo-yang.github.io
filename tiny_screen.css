@@ -8,6 +8,11 @@
     src: url("./fonts/Lato/Lato-Italic.ttf");
 }
 
+@font-face {
+    font-family: "Lato_bold";
+    src: url("./fonts/Lato/Lato-Bold.ttf");
+}
+
 body {
     font-family: 'Lato', Tahoma, Comic Sans MS, Verdana, sans-serif, Georgia;
     margin: 0;

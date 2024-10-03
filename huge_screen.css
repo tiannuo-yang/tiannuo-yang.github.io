@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: "Lato_bolt_italic";
+    src: url("./fonts/Lato/Lato-BoldItalic.ttf");
+}
+
+@font-face {
     font-family: "Lora";
     src: url("./fonts/Lora/Lora-VariableFont_wght.ttf");
 }
@@ -34,7 +39,7 @@ a {
 }
 
 .main-container {
-    max-width: 850px;
+    max-width: 875px;
     /* 可以根据需要调整这个值 */
     margin: 0;
     padding: 1.5%;
@@ -121,3 +126,8 @@ a {
     margin-bottom: -3.8%; 
     width: 15%;
 }
+
+p {
+    margin-top: 1%; /* 调整上边距 */
+    margin-bottom: 1%; /* 调整下边距 */
+  }

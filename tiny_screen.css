@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: "Lato_bolt_italic";
+    src: url("./fonts/Lato/Lato-BoldItalic.ttf");
+}
+
+@font-face {
     font-family: "Lato_bold";
     src: url("./fonts/Lato/Lato-Bold.ttf");
 }
@@ -115,3 +120,8 @@ a {
     margin-bottom: -3.8%; 
     width: 15%;
 }
+
+p {
+    margin-top: 1%; /* 调整上边距 */
+    margin-bottom: 1%; /* 调整下边距 */
+  }

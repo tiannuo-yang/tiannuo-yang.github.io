@@ -1,0 +1,258 @@
+% --- LaTeX CV Template - S. Venkatraman ---
+
+% Set document class and font size
+\documentclass[letterpaper, 10pt]{article}
+\usepackage[utf8]{inputenc}
+
+% Package imports
+\usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace}
+
+% --- Page layout settings ---
+
+% Set page margins
+\usepackage[left=0.5in, right=0.5in, bottom=0.7in, top=0.5in]{geometry}
+
+% Set line spacing
+\renewcommand{\baselinestretch}{1.15}
+
+% --- Page formatting ---
+
+% Set link colors
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+% Set font to Libertine, including math support
+%\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Remove page numbering
+\pagenumbering{gobble}
+
+
+\usepackage{csquotes}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% Name and date of last update to this document
+%\noindent{\textbf{Tiannuo Yang}
+%\hfill{\it\footnotesize Updated \today}}
+
+
+% --- Contact information and other items ---
+
+%\vspace{0.5cm} 
+%\begin{center}
+%\begin{tabular}{lll}
+%% Line 1: Email, GitHub, office location
+%\textbf{Email}: email@cornell.edu      &
+%\hspace{0.55in} \textbf{GitHub}: //github-username    &
+%\hspace{0.4in} 	\textbf{Office}: Your Building 101 \\
+%
+%% Line 2: Phone number, LinkedIn, citizenship
+%\textbf{Phone}: (314) 159-2654   & 
+%\hspace{0.55in} \textbf{LinkedIn}: //LinkedIn-URL   & 
+%\hspace{0.4in} \textbf{Citizenship}: Country 
+%\end{tabular}
+%\end{center}
+
+% --- Start the two-column table storing the main content ---
+
+% Set spacing between columns
+\setlength{\tabcolsep}{.01\textwidth}
+
+% Set the width of each column
+\begin{longtable}{p{.14\textwidth}p{.75\textwidth}}
+
+\textbf{Tiannuo Yang} & \hfill{\it\footnotesize Updated \today} \\
+\hline \\
+
+
+% --- Section: Contact Information --
+
+\textcolor{OliveGreen}{Contact} & No. 38 Tongyan Road, Jinnan District \hfill tnyang2000@gmail.com \\
+\textcolor{OliveGreen}{Information} & Tianjin, P.R. China 300350 \hfill  https://tiannuo-yang.github.io/ \\
+& \\
+
+
+% --- Section: Research interests ---
+
+\nohyphens{\textcolor{OliveGreen}{Research Interests}}
+& As Moore’s Law fades, what will be the next-generation AI system that can overcome the conflict between surging computational needs and scarce hardware resources? Inspired by this question, my current research focuses on building low-cost, high-efficiency machine learning systems that can be deployed to serve a wide range of scenarios.
+\vspace{0.01\textwidth} \\
+& Specifically, I identify performance bottlenecks, opportunities, and challenges in the system, and leverage technologies such as online learning to address the performance- and resource-oriented problems. My works aim to harness hardware resources, automate the operation of complex systems, and enhance the efficiency of systems (e.g., retrieval augmented generation). \\
+& \\
+
+
+% --- Section: Education ---
+
+\textcolor{OliveGreen}{Education} 
+& \textbf{Nankai University}, Tianjin, China \\ 
+& \textit{Master in Computer Science} (Exempted from Entrance Exam) \hfill August 2022 -- Present \\
+& Advisor: Professor Yusen Li \hspace{0.04\textwidth} GPA: \textit{3.63/4.0} \\
+& Thesis: Automated Performance Tuning Techniques for Parallel Applications \vspace{0.01\textwidth} \\
+
+& \textbf{University of Science and Technology Beijing}, Beijing, China \\ 
+& \textit{Bachelor in Information Management and Information System} \hfill August 2018 -- June 2022 \\
+& Major GPA: \textit{3.97/4.0} \hspace{0.04\textwidth} Cumulative GPA: \textit{3.89/4.0}
+\vspace{0.01\textwidth} \\
+
+& \textbf{Southern Taiwan University of Science and Technology}, Taiwan, China \\ 
+& \textit{Major in Information Management} (Exchange Program) \hfill September 2019 -- January 2020 \\
+& Cumulative GPA: \textit{4.3/4.3} \\
+& \\
+
+% --- Section: Research Experiences ---
+\textcolor{OliveGreen}{Research}
+& \textbf{University of Illinois at Urbana-Champaign}, Urbana, IL, United States \\ 
+\textcolor{OliveGreen}{Experience} & \textit{Retrieval-Augmented Generation, Text/Video Foundation Model} \hfill May 2024 -- Present \\
+&  Working with Professor Minjia Zhang on GPU-enhanced retrieval augmented generation, shedding lights on key concerns like batching strategies and
+latency-quality tradeoffs.
+\vspace{0.01\textwidth} \\
+
+
+& \textbf{Nankai University}, Tianjin, China \\ 
+& \textit{Datacenter, System, Machine Learning for System} \hfill August 2022 -- Present \\
+&  Working with Professor Yusen Li on automatic performance tuning and hardware resource isolation for job collocations within multi-core systems.
+\vspace{0.01\textwidth} \\
+
+
+& \textbf{Ant Group}, Beijing, China \\ 
+& \textit{Vector Retrieval, Vector Database Optimization} \hfill June 2023 -- January 2024 \\
+&  Worked as a research intern under Dr. Jianguo Li and Wen Hu on optimizing AI infrastructure - vector database, enhancing CodeFuse services (a coding large language model platform).
+\vspace{0.01\textwidth} \\
+
+
+& \textbf{University of Chinese Academy of Sciences}, Beijing, China \\ 
+& \textit{Mixed Integer Programming, Heuristic Algorithm} \hfill September 2020 -- September 2021 \\
+&  Worked as an undergraduate research assistant under Professor Guanghui Zhou to develop data-driven combinatorial optimization problem (vehicle routing optimization). \\
+& \\
+
+
+% --- Uncomment the next few lines if you want to include some courses ---
+%& \textbf{Selected coursework}
+%\begin{itemize}[noitemsep,leftmargin=*]
+%\item \underline{Relevant subject 1}: Course 1, Course 2, Course 3, Course 4
+%\item \underline{Relevant subject 2}: Course 1, Course 2, Course 3, Course 4
+%\end{itemize} \\
+
+
+% --- Section: Publications ---
+\nohyphens{\textcolor{OliveGreen}{Publications}} 
+& \textbf{Performance Tuning} 
+\vspace{0.01\textwidth} \\
+
+& \textit{$^*$Denotes equal contribution. $^\dagger$Denotes corresponding authorship.} 
+\vspace{0.01\textwidth} \\
+
+& K. Cheng, Z. Wang, W. Hu, \underline{T. Yang}, J. Li, S. Zhang. \enquote{SCOOT: Towards SLO-Optimized LLM Serving via Automatic Inference Engine Tuning.} Under Review at  \textit{The Web Conference (WWW)}, 2025. 
+\vspace{0.01\textwidth} \\
+
+& \underline{T. Yang}, W. Hu, W. Peng, Y. Li, J. Li, X. Liu, G. Wang. \enquote{VDTuner: Automated Performance Tuning for Vector Data Management Systems.} \textit{International Conference on Data Engineering (ICDE)}, 2024. \textcolor[RGB]{200, 0, 0}{Deployment on Ant Group's CodeFuse platform.}
+\vspace{0.01\textwidth} \\
+
+& \underline{T. Yang}, R. Chen, Y. Li, X. Liu, G. Wang. \enquote{CoTuner: A Hierarchical Learning Framework for Coordinately Optimizing Resource Partitioning and Parameter Tuning.} \textit{International Conference on Parallel Processing (ICPP)}, 2023.
+\vspace{0.01\textwidth} \\
+
+& \textbf{Research Survey} 
+\vspace{0.01\textwidth} \\
+
+& Y. Zhou$^*$, X. Lin$^*$, X. Zhang$^*$, M. Wang$^*$, G. Jiang$^*$, H. Lu$^*$, Y. Wu$^*$, K. Zhang$^*$, Z. Yang$^*$, K. Wang$^*$, Y. Sui$^*$, F. Jia$^*$ Z. Tang$^*$, Y. Zhao$^*$, H. Zhang$^*$, \underline{T. Yang}$^*$, W. Chen$^*$, Y. Mao$^*$, Y. Li$^*$, D. Bao$^*$, Y. Li$^*$, H. Liao$^*$, T. Liu$^*$, J. Liu$^*$, J. Guo$^*$, X. Zhao, Y. WEI, H. Qian, Q. Liu, X. Wang, W.K. Chan, C. Li, Y. Li, S. Yang, J. Yan, C. Mou, S. Han, W. Jin, G. Zhang, X. Zeng. \enquote{On the Opportunities of Green Computing: A Survey.} \textit{arXiv}, 2023 \\
+& (Writing Section: 6.4 Resource Optimization). 
+\vspace{0.01\textwidth} \\
+
+& \textbf{Operations Research (Undergraduate Thesis)}
+\vspace{0.01\textwidth} \\
+
+& \underline{T. Yang}$^\dagger$, Z. Chu, B. Wang. \enquote{Feasibility on the Integration of Passenger and Freight Transportation in Rural Areas: A Service Mode and an Optimization Model.} \textit{Socio-Economic Planning Sciences} (SCI JCR Q1), 2023. \\
+& \\
+
+
+% --- Section: Projects ---
+\nohyphens{\textcolor{OliveGreen}{Research}}
+& {Qiyuan Laboratory Innovation Fund} \hfill  November 2023 -- November 2024 \\
+\nohyphens{\textcolor{OliveGreen}{Projects}}
+& Worked as a core member on resource isolation mechanism for a multi-tenant cache system (i.e., Cachelib by Facebook).
+\vspace{0.01\textwidth} \\
+
+& {CCF-Ant Research Fund on Green Computing} \hfill January 2023 -- January 2024 \\
+& Worked as a leader to write project proposal and conclusion, conduct research on AI infrastructure (vector database optimization) and practical platform deployment.
+\vspace{0.01\textwidth} \\
+
+& {National Natural Science Foundation (NSF) of China} \hfill January 2023 -- Present \\
+& Working as a core member on improving resource utilization in cloud with QoS guarantee. \vspace{0.01\textwidth} \\
+
+& {Major Project of National NSF of China} \hfill December 2022 -- Present \\
+& Working on real-time scheduling of cluster robots for major equipment manufacturing. \\
+& \\
+
+
+% --- Section: Honors ---
+
+%\nohyphens{\textcolor{OliveGreen}{Academic}}
+%& 1st National Massive Storage Competition \hfill June 2023 \\
+%\nohyphens{\textcolor{OliveGreen}{Competitions}}
+%& \textit{Scheduling of Storage Data Retrieval Tasks} \hfill National 3rd Prize
+%\vspace{0.01\textwidth} \\
+%
+%& 7th National ‘Internet+’ Innovation and Entrepreneurship Competition \hfill December 2021 \\
+%& \textit{Intelligent Tuning of Cloud Services (Industrial track)} \hfill Provincial Gold Prize
+%\vspace{0.01\textwidth} \\
+%
+%& National Contemporary Undergraduate Mathematical Contest \hfill November 2020 \\
+%& \textit{Mixed Integer Programming and Heuristic Algorithms} \hfill National 2nd Prize (top 3.6\%) \\
+%& \\
+
+
+% --- Section: Honors ---
+
+\nohyphens{\textcolor{OliveGreen}{Honors And}}
+& 1st-Class Gongneng Scholarship, Nankai University \hfill 2023, 2024 \\
+\nohyphens{\textcolor{OliveGreen}{Awards}}
+& National 3rd Prize, Massive Storage Competition \hfill 2022 \\
+& Provincial Gold Prize, 'Internet+' Innovation and Entrepreneurship Competition \hfill 2021 \\
+& Excellent Student, University of Science and Technology Beijing (USTB) \hfill 2020 \\
+& National 2nd Prize (1493/41826 = top 3.6\%), Contemporary Undergraduate Mathematical Contest in Modeling \hfill 2020 \\
+& 2nd Place, Marketing Competition (turnover RMB 20,000+), USTB \hfill 2020 \\
+& Top Ten Singers on Campus, USTB \hfill 2020 \\
+& Professional Certification in E-Commerce, Taiwan Computer Skills Foundation (CSF) \hfill 2019 \\
+& Certification of Enterprise Electronic Assistant Planner, Taiwan CSF \hfill 2019 \\	
+& Team Gold Award, College Students' Social Practice, USTB \hfill 2019 \\
+& \\
+ 
+
+% --- Section: Talks and Services ---
+\nohyphens{\textcolor{OliveGreen}{Talks And}}
+& \textbf{Reviewer} for \\
+\nohyphens{\textcolor{OliveGreen}{Services}} 
+& the 2025 ACM Web Conference.
+\vspace{0.01\textwidth} \\
+
+& \textbf{Conference Talk} at \\
+& the 40th ICDE at Utrecht, the Netherlands, May 2024; \\
+& the 52nd ICPP, Online, August 2023.  
+\vspace{0.01\textwidth} \\
+
+& \textbf{Teaching Assistant} for \\
+& Computer Architecture (Fall 2023); C++ (Spring 2024). 
+\vspace{0.01\textwidth} \\
+
+& \textbf{Reading Group Founder and Leader} for \\
+& Machine learning system research at Nankai-Baidu Joint Lab (from October 2024).\\
+& \\
+
+% --- Section: Software And Systems ---
+\nohyphens{\textcolor{OliveGreen}{Open Source}}
+& VDTuner \hfill {https://github.com/tiannuo-yang/VDTuner} \\
+& An automated performance tuning system for vector data management systems. \\
+& (Chinese Blog: https://mp.weixin.qq.com/s/1JgXM5WSWBTv7fA0TLGfqw)
+%& (Deployment at CodeFuse: https://codefuse.ai/publication/publication)
+\vspace{0.01\textwidth} \\
+
+& G-VRP-IPD-TW \hfill {https://github.com/tiannuo-yang/G-VRP-IPD-TW} \\
+& Mathematical model and real-world dataset for a complex combinatorial optimization problem.
+
+
+\end{longtable}
+\end{document}

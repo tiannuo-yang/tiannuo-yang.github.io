@@ -1,0 +1,240 @@
+/* 基本的页面重置和默认字体设置 */
+body {
+    font-family: 'Lato', Tahoma, Verdana, sans-serif, Georgia; /* 主字体 Lato，后跟备选字体 */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* 淡灰色背景 */
+    color: #333; /* 默认文字颜色 */
+    font-size: 16px; /* 基础字体大小 */
+    line-height: 1.6; /* 基础行高 */
+}
+
+/* 字体定义 - 保持用户原有的本地字体设置 */
+@font-face {
+    font-family: "Lato"; /* 确保这里的 family name 与 CSS 中使用的 'Lato' 一致 */
+    src: url("./fonts/Lato/Lato-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lato_italic"; /* 自定义斜体家族名 */
+    src: url("./fonts/Lato/Lato-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Lato_bold"; /* 自定义粗体家族名 */
+    src: url("./fonts/Lato/Lato-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Lato_bolt_italic"; /* 自定义粗斜体家族名 */
+    src: url("./fonts/Lato/Lato-BoldItalic.ttf");
+}
+
+/* Lora 字体 (如果用到的话) */
+@font-face {
+    font-family: "Lora";
+    src: url("./fonts/Lora/Lora-VariableFont_wght.ttf");
+}
+
+/* 用于 HTML 中 <font style="font-family: Lato_italic;"> 的辅助类 (推荐使用语义化标签和 CSS 类) */
+.font-italic {
+    font-family: "Lato_italic", sans-serif; /* Fallback to generic sans-serif if Lato_italic isn't loaded */
+}
+/* 你也可以为 Lato_bold, Lato_bolt_italic 创建类似的类，或者直接依赖于 @font-face 和 HTML 中的 style 属性 */
+
+
+/* 主内容容器 */
+.main-container {
+    max-width: 800px; /* 内容最大宽度，保持可读性 */
+    margin: 30px auto; /* 上下边距，左右自动居中 */
+    padding: 25px 30px; /* 内边距 */
+    background-color: #fff; /* 白色背景 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 轻微阴影效果 */
+    border-radius: 8px; /* 圆角 */
+    word-break: break-word; /* 防止长单词溢出 */
+}
+
+/* 个人信息区域 */
+.profile-section {
+    text-align: center; /* 内容居中 */
+    margin-bottom: 30px; /* 与下方内容的间距 */
+    padding-bottom: 25px; /* 内边距 */
+    border-bottom: 1px solid #eee; /* 分隔线 */
+}
+
+.profile-photo {
+    width: 130px; /* 头像宽度 */
+    height: 130px; /* 头像高度 */
+    border-radius: 50%; /* 圆形头像 */
+    margin-bottom: 15px; /* 与下方文字的间距 */
+    object-fit: cover; /* 确保图片不变形 */
+}
+
+.profile-section h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.8em; /* 名字大一点 */
+    font-family: "Lato_bold", sans-serif; /* 使用自定义粗体 */
+}
+
+.profile-section p {
+    margin-bottom: 12px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.social-links img {
+    height: 24px; /* 社交图标大小 */
+    margin: 0 10px; /* 图标间距 */
+    vertical-align: middle;
+}
+
+/* 主要内容区域的各个小节 */
+.content-section .section {
+    margin-bottom: 35px; /* 小节之间的间距 */
+}
+
+.content-section .section:last-child {
+    margin-bottom: 0; /* 最后一个小节无下边距 */
+}
+
+.content-section h3 {
+    font-size: 1.5em; /* 小节标题大小 */
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px; /* 标题与下方内容的间距 */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #0070c0; /* 标题下划线，使用主题蓝色 */
+    font-family: "Lato_bold", sans-serif;
+}
+
+/* 段落样式 */
+p {
+    margin-top: 0;
+    margin-bottom: 1em; /* 段落下边距 */
+}
+
+/* 链接样式 */
+a {
+    text-decoration: none;
+    color: #0070c0; /* 链接颜色 */
+}
+
+a:hover, a:focus {
+    text-decoration: underline; /* 鼠标悬停或聚焦时显示下划线 */
+    color: #00508a; /* 悬停颜色加深 */
+}
+
+/* 出版物列表项 */
+.publication {
+    display: flex; /* 使用 flex 布局，图片和文字并排 */
+    align-items: flex-start; /* 顶部对齐 */
+    margin-bottom: 25px; /* 每个出版物条目的间距 */
+}
+
+.publication img {
+    width: 100px; /* 出版物图片宽度 */
+    height: auto;
+    margin-right: 20px; /* 图片与文字的间距 */
+    border-radius: 4px; /* 图片圆角 */
+    border: 1px solid #ddd; /* 图片边框 */
+}
+
+.publication-text {
+    flex-grow: 1; /* 文字部分占据剩余空间 */
+}
+
+.publication-text p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+.publication-text .font-italic { /* 应用于出版物信息中的斜体部分 */
+    font-family: "Lato_italic", sans-serif; 
+    /* 如果 Lato_italic 字体未定义或未加载，则使用浏览器的默认斜体 */
+    /* font-style: italic; */ 
+}
+
+
+/* 新闻、教育、荣誉等列表样式 */
+.news-list ul, .content-list ul {
+    list-style-type: disc; /* 使用实心圆点 */
+    padding-left: 20px; /* 列表左内边距 */
+    margin: 0;
+}
+
+.news-list li, .content-list li {
+    margin-bottom: 10px; /* 列表项之间的间距 */
+    font-size: 0.95em;
+}
+
+/* 页脚样式 */
+.footer-text {
+    text-align: center; /* 文字居中 */
+    margin-top: 40px; /* 与主内容的间距 */
+    padding-top: 20px; /* 内边距 */
+    border-top: 1px solid #eee; /* 分隔线 */
+    font-size: 0.85em; /* 稍小字体 */
+    color: #666; /* 页脚文字颜色 */
+}
+
+.footer-text img {
+    width: 45px; /* 地球 GIF 大小 */
+    margin-bottom: 8px; /* 与下方文字的间距 */
+    vertical-align: middle;
+}
+
+/* 响应式设计：针对小屏幕设备 */
+@media (max-width: 768px) {
+    .main-container {
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 0; /* 小屏幕上可以取消圆角 */
+    }
+
+    .profile-section h3 {
+        font-size: 1.6em;
+    }
+
+    .content-section h3 {
+        font-size: 1.3em;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 15px; /* 在非常小的屏幕上稍微减小基础字体 */
+    }
+    .main-container {
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .publication {
+        flex-direction: column; /* 出版物条目垂直堆叠 */
+        align-items: center; /* 居中对齐 */
+        text-align: center; /* 文本居中 */
+    }
+
+    .publication img {
+        margin-right: 0;
+        margin-bottom: 10px; /* 图片与文字的间距 */
+        width: 120px; /* 图片可以稍微大一点，因为它单独一行 */
+    }
+
+    .publication-text {
+        width: 100%; /* 文本占满宽度 */
+    }
+
+    .social-links img {
+        height: 22px;
+        margin: 0 8px;
+    }
+}

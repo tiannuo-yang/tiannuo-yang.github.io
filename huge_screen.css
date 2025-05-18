@@ -51,7 +51,7 @@ a {
     display: flex;
     margin: 0;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), ;
 }
 
 .left-column {

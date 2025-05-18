@@ -3,7 +3,7 @@
 <head>
     <link rel="icon" href="figures/ytn_logo2.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
     <title>Tiannuo Yang</title>
     <style>
         @font-face {
@@ -49,6 +49,11 @@
         @font-face {
             font-family: "OpenSans_condensed";
             src: url("./fonts/Open_Sans,Orbitron/Open_Sans/static/OpenSans_SemiCondensed-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "OpenSans_bold";
+            src: url("./fonts/Open_Sans,Orbitron/Open_Sans/static/OpenSans-SemiBold.ttf");
         }
 
         body {
@@ -121,9 +126,9 @@
             margin-bottom: 3%;
         }
 
-        .section h3 {
+        /* .section h3 {
             font-size: 14pt;
-        }
+        } */
 
         .publication {
             display: flex;
@@ -173,6 +178,20 @@
         h4 {
             margin-top: 1.5%;
             margin-bottom: 1.5%;
+            font-weight: 500;
+            font-size: 13pt;
+        }
+
+        /* h2 {
+            font-family: 'OpenSans';
+            font-weight: 500;
+            font-size: 15pt;
+        } */
+
+        h3 {
+            font-family: 'OpenSans' ;
+            font-weight: 500;
+            font-size: 15pt;
         }
 
         .hidden {
@@ -187,6 +206,7 @@
             font-size: 12pt;
             cursor: pointer;
             margin-left: 3%;
+            margin-bottom: 0;
             padding: 0;
             font-family: OpenSans;
         }
@@ -216,7 +236,7 @@
                 <div class="section">
                     <p>
                         Hi there! I am an incoming PhD student at <a href="https://www.cs.usc.edu/" target="_blank">University of Southern California</a>, advised by <a href="https://willieneis.github.io/" target="_blank">Willie Neiswanger</a>.
-                        I work on <b>System4AI & AI4System</b>.
+                        I work on System4AI & AI4System.
                         I like to build low-cost, high-efficiency machine learning systems that serves a wide range of scenarios (e.g., LLM Agents). A Part of them has been deployed in industry.
                     </p>
                 </div>

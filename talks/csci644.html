@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost-Aware Automatic Evaluation for Task-Oriented Dialogue Agents</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --card: #22253a;
+    --accent: #6c8cff;
+    --accent2: #ff6c6c;
+    --accent3: #4ecdc4;
+    --accent4: #f7b731;
+    --text: #e8e8ef;
+    --muted: #8b8fa3;
+    --border: #2e3148;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .slide {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    padding: 56px 80px;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide.active { display: flex; }
+
+  .slide-number {
+    position: absolute;
+    bottom: 28px;
+    right: 50px;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent3));
+    transition: width 0.4s ease;
+    z-index: 100;
+  }
+
+  .slide.title-slide {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(ellipse at 30% 50%, rgba(108,140,255,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 70%, rgba(78,205,196,0.06) 0%, transparent 50%);
+  }
+  .slide.title-slide h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--text), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .slide.title-slide .subtitle {
+    font-size: 21px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-bottom: 40px;
+    max-width: 700px;
+  }
+  .slide.title-slide .meta {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: var(--text);
+  }
+  h2 .hl { color: var(--accent); }
+  h2 .hl-red { color: var(--accent2); }
+  h2 .hl-green { color: var(--accent3); }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: var(--accent);
+  }
+
+  .content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; align-items: start; }
+
+  ul { list-style: none; padding: 0; }
+  ul li {
+    padding: 8px 0 8px 26px;
+    position: relative;
+    font-size: 19px;
+    line-height: 1.5;
+  }
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 16px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  ul li.red::before { background: var(--accent2); }
+  ul li.green::before { background: var(--accent3); }
+  ul li.yellow::before { background: var(--accent4); }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 14px;
+  }
+  .card h4 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+  .card p, .card li { font-size: 16px; line-height: 1.55; color: var(--muted); }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(108,140,255,0.1), rgba(78,205,196,0.05));
+    border-left: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 22px 28px;
+    margin: 18px 0;
+    font-size: 19px;
+    line-height: 1.6;
+  }
+
+  .warning-box {
+    background: linear-gradient(135deg, rgba(255,108,108,0.1), rgba(247,183,49,0.05));
+    border-left: 4px solid var(--accent2);
+    border-radius: 0 12px 12px 0;
+    padding: 22px 28px;
+    margin: 18px 0;
+    font-size: 19px;
+    line-height: 1.6;
+  }
+
+  .stat-row { display: flex; gap: 24px; margin: 20px 0; }
+  .stat {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .stat .number { font-size: 38px; font-weight: 700; color: var(--accent); display: block; }
+  .stat .number.red { color: var(--accent2); }
+  .stat .number.green { color: var(--accent3); }
+  .stat .number.yellow { color: var(--accent4); }
+  .stat .label { font-size: 14px; color: var(--muted); margin-top: 6px; display: block; }
+
+  .tag {
+    display: inline-block; padding: 3px 10px; border-radius: 6px;
+    font-size: 13px; font-weight: 600; margin-right: 5px;
+  }
+  .tag.blue { background: rgba(108,140,255,0.2); color: var(--accent); }
+  .tag.red { background: rgba(255,108,108,0.2); color: var(--accent2); }
+  .tag.green { background: rgba(78,205,196,0.2); color: var(--accent3); }
+  .tag.yellow { background: rgba(247,183,49,0.2); color: var(--accent4); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0; }
+  table th {
+    background: var(--card); padding: 10px 14px; text-align: left;
+    font-weight: 600; color: var(--accent); border-bottom: 2px solid var(--border);
+  }
+  table td { padding: 8px 14px; border-bottom: 1px solid var(--border); }
+  table tr:hover td { background: rgba(108,140,255,0.04); }
+  .bold { font-weight: 700; }
+  .dim { color: var(--muted); }
+
+  .diagram {
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px; margin: 26px 0; font-size: 17px;
+  }
+  .diagram .box {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px 22px; text-align: center; min-width: 130px;
+  }
+  .diagram .box.active-box { border-color: var(--accent); background: rgba(108,140,255,0.1); }
+  .diagram .arrow { color: var(--muted); font-size: 22px; }
+
+  p.body-text { font-size: 19px; line-height: 1.65; color: var(--text); max-width: 950px; }
+
+  .em { color: var(--accent); font-weight: 600; }
+  .em-red { color: var(--accent2); font-weight: 600; }
+  .em-green { color: var(--accent3); font-weight: 600; }
+  .em-yellow { color: var(--accent4); font-weight: 600; }
+
+  .analogy {
+    background: rgba(247,183,49,0.08); border: 1px dashed var(--accent4);
+    border-radius: 10px; padding: 16px 22px; margin: 14px 0;
+    font-size: 17px; line-height: 1.55;
+  }
+  .analogy::before { content: 'Analogy: '; font-weight: 700; color: var(--accent4); }
+
+  .nav-hint {
+    position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+    font-size: 13px; color: var(--muted); opacity: 0.4;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .slide.active .content { animation: fadeInUp 0.45s ease; }
+
+  /* Big-quote style for emphasis slides */
+  .big-quote {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ===== SLIDE 1: Title ===== -->
+<div class="slide title-slide active">
+  <h1>Cost-Aware Automatic Evaluation<br>for Task-Oriented Dialogue Agents</h1>
+  <div class="meta" style="margin-top:20px;">Tiannuo Yang &amp; Linxin Song<br>CSCI 644 &mdash; Final Presentation</div>
+  <div class="slide-number">1</div>
+</div>
+
+<!-- ===== SLIDE 2: Background ===== -->
+<div class="slide">
+  <h2>Background: AI Agents <span class="hl">Use Tools</span></h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 24px;">
+      Modern AI agents don't just generate text&mdash;they solve tasks by <span class="em">interacting with the outside world</span>: searching databases, running experiments, consulting experts.
+    </p>
+    <div class="diagram">
+      <div class="box">
+        <div style="font-size:24px; font-weight:700; color:var(--accent);">1</div>
+        <div style="font-weight:600;">Think</div>
+        <div style="font-size:13px; color:var(--muted); margin-top:4px;">LLM reasons</div>
+      </div>
+      <div class="arrow">&rarr;</div>
+      <div class="box active-box">
+        <div style="font-size:24px; font-weight:700; color:var(--accent);">2</div>
+        <div style="font-weight:600;">Act</div>
+        <div style="font-size:13px; color:var(--accent); margin-top:4px;">Call external tool</div>
+      </div>
+      <div class="arrow">&rarr;</div>
+      <div class="box">
+        <div style="font-size:24px; font-weight:700; color:var(--accent);">3</div>
+        <div style="font-weight:600;">Observe</div>
+        <div style="font-size:13px; color:var(--muted); margin-top:4px;">Get result</div>
+      </div>
+      <div class="arrow">&rarr;</div>
+      <div class="box">
+        <div style="font-size:24px; font-weight:700; color:var(--accent);">4</div>
+        <div style="font-weight:600;">Repeat</div>
+        <div style="font-size:13px; color:var(--muted); margin-top:4px;">Until done</div>
+      </div>
+    </div>
+    <div class="two-col" style="margin-top: 16px;">
+      <div>
+        <h3>Standard Evaluation Assumption</h3>
+        <ul>
+          <li>All tool calls are <span class="em">free and instant</span></li>
+          <li>Only the final answer quality is measured</li>
+          <li>More tool calls = better exploration = better answers</li>
+          <li>Models ranked on accuracy alone</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="color:var(--accent2);">Deployment Reality</h3>
+        <ul>
+          <li class="red">A training run costs <span class="em-red">30 sec to 14 hours</span></li>
+          <li class="red">A document fetch costs <span class="em-red">~5 minutes</span></li>
+          <li class="red">Expert feedback costs <span class="em-red">~5 minutes</span></li>
+          <li class="red">The model thinks in <span class="em-green">milliseconds</span>&mdash;the <em>world</em> is the bottleneck</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">2</div>
+</div>
+
+<!-- ===== SLIDE 3: EEI Problem ===== -->
+<div class="slide">
+  <h2>The <span class="hl-red">Expensive External Information</span> Problem</h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 20px;">
+      Current benchmarks measure accuracy and speed, but ignore cost. We argue cost deserves equal attention. We call this the <strong>Expensive External Information (EEI)</strong> problem.
+    </p>
+    <p class="body-text" style="font-size:18px; margin-bottom:20px;">
+      When every tool call has a real cost, the critical capability is no longer <em>tool-use proficiency</em> but <span class="em">cost-aware decision-making</span>:
+    </p>
+    <ul style="max-width:700px; margin-bottom:20px;">
+      <li>Is this query <span class="em">worth its price</span>?</li>
+      <li>How should I <span class="em">allocate</span> my remaining budget?</li>
+      <li>What do I do when budget <span class="em-red">runs out</span>?</li>
+    </ul>
+    <div class="highlight-box" style="max-width:900px;">
+      Under EEI, <span class="em">5 well-chosen queries can outperform 50 mediocre ones</span>&mdash;but cost-free benchmarks cannot detect which agent knows the difference.
+    </div>
+    <div class="analogy" style="max-width:900px;">
+      Imagine researching at a pay-per-article library. With unlimited money, you'd read everything. With $9, you'd better pick your 3 articles very carefully.
+    </div>
+  </div>
+  <div class="slide-number">3</div>
+</div>
+
+<!-- ===== SLIDE 4: Why EEI Matters ===== -->
+<div class="slide">
+  <h2>Why Does EEI <span class="hl-red">Matter</span>?</h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 24px;">
+      If model rankings change when cost is introduced, three problems follow:
+    </p>
+    <div style="max-width:800px;">
+      <div class="card" style="border-left:4px solid var(--accent2); margin-bottom:16px;">
+        <h4 style="color:var(--accent2); font-size:19px;">Wrong model gets deployed</h4>
+        <p style="font-size:17px;">The cost-free leaderboard winner may be the worst choice under a real budget. You pick a model based on benchmarks&mdash;and it fails in production.</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent4); margin-bottom:16px;">
+        <h4 style="color:var(--accent4); font-size:19px;">Hidden failure modes</h4>
+        <p style="font-size:17px;">Cost-free evaluation can't reveal whether a model wastes budget, ignores constraints, or collapses under pressure. These problems only appear in deployment.</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent);">
+        <h4 style="color:var(--accent); font-size:19px;">No way to measure it&mdash;until now</h4>
+        <p style="font-size:17px;">Testing at real-time speed would take months. We need a fast, reproducible framework to evaluate agents under cost pressure.</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">4</div>
+</div>
+
+<!-- ===== SLIDE 5: ExpGym ===== -->
+<div class="slide">
+  <h2><span class="hl">ExpGym</span>: Fast Evaluation in Expensive Worlds</h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 20px;">
+      ExpGym is a pre-cached test suite that makes large-scale evaluation under cost pressure practical.
+    </p>
+    <div class="two-col">
+      <div>
+        <h3>How It Works</h3>
+        <div class="card" style="border-left:3px solid var(--accent); margin-bottom:12px;">
+          <h4 style="color:var(--accent);">Pre-cached Interactions</h4>
+          <p>All tool call results are computed once and stored. The agent still makes its own decisions&mdash;only the environment's responses are replayed.</p>
+        </div>
+        <div class="card" style="border-left:3px solid var(--accent4); margin-bottom:12px;">
+          <h4 style="color:var(--accent4);">Simulated Budget Accounting</h4>
+          <p>Each call deducts its real wall-clock cost from the agent's budget. If the agent overspends, the result is <strong>withheld</strong>&mdash;it paid but got nothing back.</p>
+        </div>
+        <div class="analogy" style="margin-top:4px;">
+          Like a flight simulator: the world's responses are pre-recorded, so we can test a pilot's decisions without flying a real plane.
+        </div>
+      </div>
+      <div>
+        <h3>The Speedup</h3>
+        <table>
+          <tr><th>Scenario</th><th>Real-Time</th><th>ExpGym</th><th>Speedup</th></tr>
+          <tr><td>Tuning</td><td>~30 min</td><td class="bold" style="color:var(--accent3)">~15 s</td><td class="bold">120&times;</td></tr>
+          <tr><td>Search</td><td>~40 min</td><td class="bold" style="color:var(--accent3)">~20 s</td><td class="bold">120&times;</td></tr>
+          <tr><td>Audit</td><td>~50 min</td><td class="bold" style="color:var(--accent3)">~30 s</td><td class="bold">100&times;</td></tr>
+        </table>
+        <div class="highlight-box" style="margin-top:16px;">
+          A full six-model, three-regime sweep (<strong>1,818 traces</strong>) completes in <span class="em">~1 day</span> with ExpGym&mdash;versus <span class="em-red">months</span> at real-time cost.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">5</div>
+</div>
+
+<!-- ===== SLIDE 6: Three Expensive Worlds ===== -->
+<div class="slide">
+  <h2>Three <span class="hl">Expensive Worlds</span></h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 20px;">
+      Each world isolates a different type of costly interaction&mdash;optimization, retrieval, and verification:
+    </p>
+    <div class="three-col">
+      <div class="card" style="border-top: 3px solid var(--accent);">
+        <h4 style="color:var(--accent); font-size:19px;">Hyperparameter Tuning</h4>
+        <p style="margin-top:10px; color:var(--text); font-size:15px;">
+          <strong>Goal:</strong> Find the best configuration for a black-box ML model.
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Tool:</strong> <code style="color:var(--accent)">evaluate_config</code> &mdash; submit parameters, get performance.
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Cost:</strong> 29&ndash;50,264s per call (varies 1,700&times;).
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Scale:</strong> 9 tasks across 3 families.
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Metric:</strong> Gap Score (0 = random, 100 = best known).
+        </p>
+      </div>
+      <div class="card" style="border-top: 3px solid var(--accent2);">
+        <h4 style="color:var(--accent2); font-size:19px;">Restricted Search</h4>
+        <p style="margin-top:10px; color:var(--text); font-size:15px;">
+          <strong>Goal:</strong> Answer questions requiring chaining across multiple articles (e.g., find X's grandmother).
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Tool:</strong> <code style="color:var(--accent2)">search</code> &mdash; query &rarr; article. Re-queries are free.
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Cost:</strong> ~5 min per new article.
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Scale:</strong> 5,000 fictional articles, 35 questions (3 retrieval steps each).
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Metric:</strong> F1 (predicted vs. correct answers).
+        </p>
+      </div>
+      <div class="card" style="border-top: 3px solid var(--accent3);">
+        <h4 style="color:var(--accent3); font-size:19px;">Evidence Audit</h4>
+        <p style="margin-top:10px; color:var(--text); font-size:15px;">
+          <strong>Goal:</strong> Classify legal hypotheses and find supporting evidence in contracts.
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Tool:</strong> <code style="color:var(--accent3)">human_feedback</code> &mdash; submit hypothesis + evidence, get verification.
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Cost:</strong> ~5 min per verification.
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Scale:</strong> 13 contracts, 17 hypotheses each.
+        </p>
+        <p style="margin-top:8px; font-size:15px;">
+          <strong>Metrics:</strong> Label accuracy + Evidence accuracy.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">6</div>
+</div>
+
+<!-- ===== SLIDE 7: Three Budget Levels ===== -->
+<div class="slide">
+  <h2>Three <span class="hl">Budget Levels</span></h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 24px;">
+      The budget is a multiple of the cheapest possible tool call. We test three levels:
+    </p>
+    <div class="three-col">
+      <div class="card" style="border-left:4px solid var(--accent3); text-align:center; padding:30px;">
+        <div style="font-size:48px; font-weight:700; color:var(--accent3);">Unlimited</div>
+        <h4 style="color:var(--accent3); margin-top:10px; font-size:20px;">Cost-Free</h4>
+        <p style="text-align:left; margin-top:16px; font-size:17px; color:var(--text);">
+          No spending limit. Cost is hidden from the agent. This is how most benchmarks work today.
+        </p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent4); text-align:center; padding:30px;">
+        <div style="font-size:48px; font-weight:700; color:var(--accent4);">10&times;</div>
+        <h4 style="color:var(--accent4); margin-top:10px; font-size:20px;">Cost-Moderate</h4>
+        <p style="text-align:left; margin-top:16px; font-size:17px; color:var(--text);">
+          Budget = 10&times; the cheapest call. Agent can complete most tasks, but must <strong>prioritize</strong>. Cost shown after each call.
+        </p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent2); text-align:center; padding:30px;">
+        <div style="font-size:48px; font-weight:700; color:var(--accent2);">3&times;</div>
+        <h4 style="color:var(--accent2); margin-top:10px; font-size:20px;">Cost-Tight</h4>
+        <p style="text-align:left; margin-top:16px; font-size:17px; color:var(--text);">
+          Budget = only 3&times; the cheapest call. Agent can afford roughly <strong>~3 actions</strong>. Every call must count.
+        </p>
+      </div>
+    </div>
+    <div class="warning-box" style="margin-top: 20px;">
+      <strong>Over-budget rule:</strong> If the agent overspends, the result is <span class="em-red">withheld</span>&mdash;the agent paid the cost but got nothing back, and must submit its answer immediately.
+    </div>
+  </div>
+  <div class="slide-number">7</div>
+</div>
+
+<!-- ===== SLIDE 8: Experimental Setup ===== -->
+<div class="slide">
+  <h2><span class="hl">Experimental</span> Setup</h2>
+  <div class="content">
+    <div class="two-col">
+      <div>
+        <h3>Six Frontier LLMs</h3>
+        <table style="font-size:17px;">
+          <tr><th>Model</th><th>Provider</th></tr>
+          <tr><td>GPT-5.2</td><td class="dim">OpenAI</td></tr>
+          <tr><td>GPT-4.1</td><td class="dim">OpenAI</td></tr>
+          <tr><td>Claude Haiku-4.5</td><td class="dim">Anthropic</td></tr>
+          <tr><td>DeepSeek-V3.2</td><td class="dim">DeepSeek</td></tr>
+          <tr><td>Gemini-3-Flash</td><td class="dim">Google</td></tr>
+          <tr><td>Mistral-Large</td><td class="dim">Mistral</td></tr>
+        </table>
+        <p style="font-size:14px; color:var(--muted); margin-top:8px;">All via OpenRouter, extended reasoning disabled, max 30 steps per session.</p>
+      </div>
+      <div>
+        <h3>Scale</h3>
+        <div class="stat-row" style="flex-direction:column; gap:16px;">
+          <div class="stat" style="text-align:left; display:flex; align-items:center; gap:16px;">
+            <span class="number" style="font-size:40px; min-width:80px;">6</span>
+            <span class="label" style="text-align:left; font-size:17px;">Frontier LLMs</span>
+          </div>
+          <div class="stat" style="text-align:left; display:flex; align-items:center; gap:16px;">
+            <span class="number" style="font-size:40px; min-width:80px;">3</span>
+            <span class="label" style="text-align:left; font-size:17px;">Expensive worlds (tuning, search, audit)</span>
+          </div>
+          <div class="stat" style="text-align:left; display:flex; align-items:center; gap:16px;">
+            <span class="number" style="font-size:40px; min-width:80px;">3</span>
+            <span class="label" style="text-align:left; font-size:17px;">Cost regimes (free, moderate, tight)</span>
+          </div>
+          <div class="stat" style="text-align:left; display:flex; align-items:center; gap:16px;">
+            <span class="number green" style="font-size:40px; min-width:80px;">1,818</span>
+            <span class="label" style="text-align:left; font-size:17px;">Total experiment traces collected</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">8</div>
+</div>
+
+<!-- ===== SLIDE 9: Rankings Invert ===== -->
+<div class="slide">
+  <h2>Result 1: Rankings <span class="hl-red">Invert</span> in Every Task Family</h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 16px;">
+      The #1 model changes in <span class="em-red">all 7 out of 7</span> task families when we go from Cost-Free to Cost-Tight:
+    </p>
+    <div class="two-col">
+      <div>
+        <table style="font-size:15px;">
+          <tr>
+            <th>Task Family</th>
+            <th style="color:var(--accent3);">#1 No Budget</th>
+            <th style="color:var(--accent2);">#1 Tight Budget</th>
+          </tr>
+          <tr>
+            <td><strong>ParamNet</strong> <span class="dim">(tuning)</span></td>
+            <td style="color:var(--accent3);">Haiku-4.5 <span class="dim">(95.8)</span></td>
+            <td style="color:var(--accent2);">DSV3.2 <span class="dim">(83.5)</span></td>
+          </tr>
+          <tr>
+            <td><strong>NAS-201</strong> <span class="dim">(tuning)</span></td>
+            <td style="color:var(--accent3);">Gemini-3 <span class="dim">(97.0)</span></td>
+            <td style="color:var(--accent2);">GPT-5.2 <span class="dim">(83.5)</span></td>
+          </tr>
+          <tr>
+            <td><strong>whois</strong> <span class="dim">(search)</span></td>
+            <td style="color:var(--accent3);">DSV3.2 <span class="dim">(.776)</span></td>
+            <td style="color:var(--accent2);">GPT-5.2 <span class="dim">(.300)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Audit: label</strong></td>
+            <td style="color:var(--accent3);">Haiku <span class="dim">(.897)</span></td>
+            <td style="color:var(--accent2);">GPT-5.2 <span class="dim">(.836)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Audit: evidence</strong></td>
+            <td style="color:var(--accent3);">Haiku <span class="dim">(.848)</span></td>
+            <td style="color:var(--accent2);">GPT-5.2 <span class="dim">(.567)</span></td>
+          </tr>
+        </table>
+        <p style="font-size:14px; color:var(--muted); margin-top:6px;">5 of 7 families shown. All 7 invert.</p>
+      </div>
+      <div>
+        <div class="stat-row" style="flex-direction:column; gap:14px;">
+          <div class="stat" style="text-align:left; display:flex; align-items:center; gap:16px;">
+            <span class="number red" style="font-size:36px; min-width:90px;">7 / 7</span>
+            <span class="label" style="text-align:left; font-size:16px;">#1 model changes in every family</span>
+          </div>
+          <div class="stat" style="text-align:left; display:flex; align-items:center; gap:16px;">
+            <span class="number yellow" style="font-size:36px; min-width:90px;">0.39</span>
+            <span class="label" style="text-align:left; font-size:16px;">rank correlation (1.0 = same order, 0 = fully reshuffled)</span>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top:14px; font-size:17px;">
+          Not just a swap at the top&mdash;the <span class="em">entire ordering reshuffles</span>. Under Cost-Free, Haiku wins 4/7 families. Under Cost-Tight, it wins only 1. No single model dominates across all regimes.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">9</div>
+</div>
+
+<!-- ===== SLIDE 10: Deployment Regret ===== -->
+<div class="slide">
+  <h2>Result 2: <span class="hl-red">Deployment Regret</span> Is Real</h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 16px;">
+      If you trust the cost-free leaderboard and deploy its winner, how much performance do you lose?
+    </p>
+    <div class="highlight-box" style="margin-bottom:24px; font-size:18px; max-width:900px;">
+      <strong>Deployment Regret</strong> = (how the leaderboard winner actually performs under budget) &minus; (how the true best model performs under budget). It measures how much performance is <span class="em">left on the table</span>.
+    </div>
+    <table style="max-width:750px; font-size:17px;">
+      <tr><th>Family</th><th>Regret</th><th>Original Lead on Leaderboard</th><th>Comparison</th></tr>
+      <tr>
+        <td>ParamNet</td>
+        <td class="bold" style="color:var(--accent2);">5.5 points</td>
+        <td class="dim">5.2 points</td>
+        <td style="color:var(--accent2);">Regret <strong>&gt;</strong> lead</td>
+      </tr>
+      <tr>
+        <td>NAS-101</td>
+        <td class="bold" style="color:var(--accent2);">8.7 points</td>
+        <td class="dim">2.6 points</td>
+        <td style="color:var(--accent2);">Regret <strong>3.3&times;</strong> lead</td>
+      </tr>
+      <tr>
+        <td>whois</td>
+        <td class="bold" style="color:var(--accent2);">0.052 F1</td>
+        <td class="dim">0.054 F1</td>
+        <td style="color:var(--accent4);">Regret &asymp; lead</td>
+      </tr>
+    </table>
+    <div class="warning-box" style="margin-top:20px; max-width:900px; font-size:18px;">
+      In <strong>3 of 7</strong> families, the regret is <span class="em-red">comparable to or exceeds</span> the original advantage. At the task level, <strong>7/9 tuning tasks</strong> invert their #1 model. Maximum regret: <span class="em-red">33.9 points</span>.
+    </div>
+  </div>
+  <div class="slide-number">10</div>
+</div>
+
+<!-- ===== SLIDE 11: Three Behavioral Classes ===== -->
+<div class="slide">
+  <h2>Result 3: <span class="hl">Three Behavioral Classes</span></h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 20px;">
+      Why do rankings invert? Models fall into three groups based on how they handle budget pressure:
+    </p>
+    <div class="three-col">
+      <div class="card" style="border-top: 3px solid var(--accent3);">
+        <div style="margin-bottom:10px;">
+          <span class="tag green">Winner under budget</span>
+        </div>
+        <h4 style="color:var(--accent3); font-size:18px;">Naturally Efficient</h4>
+        <p style="font-size:15px; color:var(--text); margin-bottom:8px;">GPT-5.2</p>
+        <ul style="margin-top:8px;">
+          <li style="font-size:14px;">Uses only <strong>7.6 tool calls</strong> on average (half what others use)</li>
+          <li style="font-size:14px;">Under budget, reduces calls by just 30%&mdash;barely needs to change</li>
+          <li style="font-size:14px;">Only <strong>4%</strong> of runs terminated for overspending</li>
+          <li style="font-size:14px;">Wins <strong>4 of 7</strong> families under tight budget</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top: 3px solid var(--accent4);">
+        <div style="margin-bottom:10px;">
+          <span class="tag yellow">Sees it, can't fix it</span>
+        </div>
+        <h4 style="color:var(--accent4); font-size:18px;">Aware but Ineffective</h4>
+        <p style="font-size:15px; color:var(--text); margin-bottom:8px;">Haiku-4.5, DSV3.2</p>
+        <ul style="margin-top:8px;">
+          <li style="font-size:14px;">Haiku slashes from <strong>30 to 6.6 calls</strong> (78% reduction)&mdash;but still runs out</li>
+          <li style="font-size:14px;">DSV3.2 <em>mentions</em> budget 68 times&mdash;but <strong>96%</strong> of runs still terminated</li>
+          <li style="font-size:14px;">Both talk about the budget, neither changes <em>what</em> they search for</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top: 3px solid var(--accent2);">
+        <div style="margin-bottom:10px;">
+          <span class="tag red">Doesn't even notice</span>
+        </div>
+        <h4 style="color:var(--accent2); font-size:18px;">Budget-Blind</h4>
+        <p style="font-size:15px; color:var(--text); margin-bottom:8px;">Gemini-3, Mistral, GPT-4.1</p>
+        <ul style="margin-top:8px;">
+          <li style="font-size:14px;">Gemini-3 produces <strong>zero</strong> budget mentions in its reasoning</li>
+          <li style="font-size:14px;">56&ndash;89% of runs terminated for overspending</li>
+          <li style="font-size:14px;">No change in strategy&mdash;rigid until cut off</li>
+          <li style="font-size:14px;">Some <strong>make up answers</strong> instead of searching</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">11</div>
+</div>
+
+<!-- ===== SLIDE 12: Key Insight ===== -->
+<div class="slide">
+  <h2>Key Insight: Awareness <span class="hl-red">&ne;</span> Adaptation</h2>
+  <div class="content" style="align-items:center;">
+    <div class="big-quote">
+      The critical gap is not whether a model <span class="em">notices</span> the budget,<br>
+      but whether it actually <span class="em-red">changes its behavior</span>.
+    </div>
+    <div class="stat-row" style="max-width:800px; margin-top:30px;">
+      <div class="stat">
+        <span class="number green" style="font-size:32px;">GPT-5.2</span>
+        <span class="label">Naturally frugal &rarr; wins under budget without trying</span>
+      </div>
+      <div class="stat">
+        <span class="number yellow" style="font-size:32px;">DSV3.2</span>
+        <span class="label">Mentions budget 68 times &rarr; 96% of runs still terminated</span>
+      </div>
+      <div class="stat">
+        <span class="number red" style="font-size:32px;">Gemini-3</span>
+        <span class="label">Zero budget mentions &rarr; makes up plausible answers instead</span>
+      </div>
+    </div>
+    <div class="analogy" style="max-width:800px; margin-top:24px;">
+      A student who says "I should study more" every day but never changes their routine is aware of the problem&mdash;but awareness alone doesn't improve their grades.
+    </div>
+  </div>
+  <div class="slide-number">12</div>
+</div>
+
+<!-- ===== SLIDE 13: Budget Exhaustion ===== -->
+<div class="slide">
+  <h2>Result 4a: <span class="hl-red">Budget Exhaustion</span> Dominates</h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 20px;">
+      Under Cost-Free, 85% of traces complete successfully. Under Cost-Tight, <span class="em-red">65% fail because the agent ran out of budget</span>:
+    </p>
+    <div style="max-width:600px;">
+      <div class="card" style="padding:20px 24px; margin-bottom:10px; border-left:4px solid var(--accent3);">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:18px;">Completed successfully</span>
+          <span><span style="color:var(--accent3);font-weight:700; font-size:20px;">85%</span> <span class="dim" style="font-size:18px;">&rarr;</span> <span style="color:var(--accent2);font-weight:700; font-size:20px;">30%</span></span>
+        </div>
+      </div>
+      <div class="card" style="padding:20px 24px; margin-bottom:10px; border-left:4px solid var(--accent2);">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:18px;">Ran out of budget</span>
+          <span><span style="color:var(--accent3);font-weight:700; font-size:20px;">0%</span> <span class="dim" style="font-size:18px;">&rarr;</span> <span style="color:var(--accent2);font-weight:700; font-size:20px;">65%</span></span>
+        </div>
+      </div>
+      <div class="card" style="padding:20px 24px; margin-bottom:10px; border-left:4px solid var(--accent4);">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:18px;">Wrong reasoning</span>
+          <span><span style="color:var(--accent4);font-weight:700; font-size:20px;">10%</span> <span class="dim" style="font-size:18px;">&rarr;</span> <span style="color:var(--muted);font-weight:700; font-size:20px;">2%</span></span>
+        </div>
+      </div>
+      <div class="card" style="padding:20px 24px; border-left:4px solid var(--muted);">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:600; font-size:18px;">Format error</span>
+          <span class="dim" style="font-size:18px;">3&ndash;5% (constant)</span>
+        </div>
+      </div>
+      <p style="font-size:14px; color:var(--muted); margin-top:8px;">Values: Cost-Free &rarr; Cost-Tight</p>
+    </div>
+    <div class="highlight-box" style="margin-top:16px; max-width:800px; font-size:18px;">
+      Budget exhaustion <span class="em">replaces reasoning failure</span> as the dominant failure mode. The bottleneck shifts from the model's own ability to its interaction with the world.
+    </div>
+  </div>
+  <div class="slide-number">13</div>
+</div>
+
+<!-- ===== SLIDE 14: Per-Scenario Vulnerability ===== -->
+<div class="slide">
+  <h2>Result 4b: Each Scenario Fails <span class="hl-red">Differently</span></h2>
+  <div class="content">
+    <p class="body-text" style="margin-bottom: 24px;">
+      Different scenarios expose different vulnerabilities:
+    </p>
+    <div class="three-col">
+      <div class="card" style="border-top:3px solid var(--accent2);">
+        <h4 style="color:var(--accent2); font-size:19px;">Search: Most Sensitive</h4>
+        <p style="font-size:16px; color:var(--text); margin-top:10px;">
+          Only <strong>42% of traces complete</strong> under budget pressure (vs. 61% tuning, 73% audit).
+        </p>
+        <p style="font-size:15px; margin-top:12px;">
+          Multi-hop questions need 3+ article fetches, but a tight budget allows only ~3 total calls. The task itself requires nearly the entire budget.
+        </p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--accent4);">
+        <h4 style="color:var(--accent4); font-size:19px;">Audit: Looks Fine, But Isn't</h4>
+        <p style="font-size:16px; color:var(--text); margin-top:10px;">
+          Models still get the <strong>labels</strong> roughly right, but the <strong>evidence supporting those labels collapses 2&ndash;10&times; faster</strong>.
+        </p>
+        <p style="font-size:15px; margin-top:12px;">
+          The system <em>appears</em> to work but has silently lost its factual grounding&mdash;a dangerous form of degradation.
+        </p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--accent);">
+        <h4 style="color:var(--accent); font-size:19px;">Tuning: Model-Specific</h4>
+        <p style="font-size:16px; color:var(--text); margin-top:10px;">
+          Each model fails for <strong>characteristically different reasons</strong>.
+        </p>
+        <p style="font-size:15px; margin-top:12px;">
+          GPT-5.2 completes 77% of traces. Mistral has the highest reasoning failure rate (10%). DSV3.2 has the lowest completion (36%) due to format errors.
+        </p>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top:16px; font-size:18px;">
+      Models fail for <span class="em">diverse</span> reasons&mdash;exhausting budgets, making up answers, or ignoring constraints. <span class="em-red">No single training fix generalizes</span> across models and scenarios.
+    </div>
+  </div>
+  <div class="slide-number">14</div>
+</div>
+
+<!-- ===== SLIDE 15: Takeaways ===== -->
+<div class="slide">
+  <h2>Key <span class="hl">Takeaways</span></h2>
+  <div class="content">
+    <div style="max-width:850px;">
+      <div class="card" style="border-left: 4px solid var(--accent2); margin-bottom: 20px;">
+        <h4 style="color:var(--accent2); font-size:20px;">1. Cost-free leaderboards are structurally blind</h4>
+        <p style="font-size:17px; color:var(--text);">
+          The best model under free evaluation is <strong>systematically the wrong deployment choice</strong> under budget. Rankings reshuffled in all 7/7 task families.
+        </p>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--accent4); margin-bottom: 20px;">
+        <h4 style="color:var(--accent4); font-size:20px;">2. Three behavioral classes explain the inversions</h4>
+        <p style="font-size:17px; color:var(--text);">
+          Naturally efficient, aware-but-ineffective, and budget-blind. These same classes recur across all scenarios&mdash;stable model-level properties invisible to cost-free evaluation.
+        </p>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--accent3);">
+        <h4 style="color:var(--accent3); font-size:20px;">3. Failures are diverse&mdash;no single fix works</h4>
+        <p style="font-size:17px; color:var(--text);">
+          Budget exhaustion dominates (0% &rarr; 65%), but models also make up answers, produce format errors, and degrade silently. No single training intervention addresses all failure modes.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">15</div>
+</div>
+
+<!-- ===== SLIDE 16: The Third Axis ===== -->
+<div class="slide">
+  <h2>The <span class="hl">Third Evaluation Axis</span></h2>
+  <div class="content" style="align-items:center;">
+    <p class="body-text" style="margin-bottom: 28px; text-align:center;">
+      Current agent evaluation measures two things. Our results argue for a third:
+    </p>
+    <div style="max-width:600px; width:100%;">
+      <div class="card" style="padding:18px 24px; margin-bottom:12px;">
+        <span style="font-size:19px;"><span class="dim" style="margin-right:10px;">1.</span><strong>Accuracy</strong> &mdash; Does it get the right answer?</span>
+      </div>
+      <div class="card" style="padding:18px 24px; margin-bottom:12px;">
+        <span style="font-size:19px;"><span class="dim" style="margin-right:10px;">2.</span><strong>Latency</strong> &mdash; How fast does it respond?</span>
+      </div>
+      <div class="card" style="padding:18px 24px; border:2px solid var(--accent); background:rgba(108,140,255,0.08);">
+        <span style="font-size:19px; color:var(--accent);"><span style="margin-right:10px;">3.</span><strong>Interaction Cost</strong> &mdash; How wisely does it spend?</span>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top:28px; max-width:750px; text-align:center; font-size:18px;">
+      <strong>ExpGym</strong> makes this third axis measurable and practical. Its 120&times; speedup turns month-long evaluations into single-day sweeps&mdash;serving as both an evaluation platform and a development sandbox for cost-aware agents.
+    </div>
+  </div>
+  <div class="slide-number">16</div>
+</div>
+
+<!-- ===== SLIDE 17: Limitations & Future Work ===== -->
+<div class="slide">
+  <h2>Limitations &amp; <span class="hl">Future Work</span></h2>
+  <div class="content">
+    <div class="two-col">
+      <div>
+        <h3>Limitations</h3>
+        <div class="card" style="border-left:3px solid var(--accent4); margin-bottom:14px;">
+          <h4 style="color:var(--accent4);">Simulated, not real-time costs</h4>
+          <p>ExpGym deducts simulated time rather than imposing real waits. This prevents studying real-time adaptive strategies (e.g., an agent that plans while waiting).</p>
+        </div>
+        <div class="card" style="border-left:3px solid var(--accent4); margin-bottom:14px;">
+          <h4 style="color:var(--accent4);">Task and model coverage</h4>
+          <p>Three scenarios, six models. Additional domains (e.g., code generation, web navigation) and model sizes may reveal different patterns.</p>
+        </div>
+        <div class="card" style="border-left:3px solid var(--accent4);">
+          <h4 style="color:var(--accent4);">Descriptive, not causal</h4>
+          <p>Our failure analysis identifies behavioral patterns but does not test causal interventions (e.g., adding budget hints, training with cost rewards).</p>
+        </div>
+      </div>
+      <div>
+        <h3>Future Directions</h3>
+        <ul>
+          <li>Can <span class="em">post-training</span> (e.g., RL with budget-efficiency rewards) close the gap between aware-but-ineffective and efficient models?</li>
+          <li class="green">Extend ExpGym to more <span class="em-green">domains and models</span>, including open-weight models of varying sizes</li>
+          <li class="yellow">Design <span class="em-yellow">causal interventions</span> to test whether budget signals, triage heuristics, or cost-aware prompting can improve performance</li>
+          <li>Explore <span class="em">infrastructure-level solutions</span> that coordinate multiple agents to share expensive observations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">17</div>
+</div>
+
+<!-- ===== SLIDE 18: Thank You ===== -->
+<div class="slide title-slide">
+  <h1>Thank You</h1>
+  <div class="subtitle">Questions?</div>
+  <div class="slide-number">18</div>
+</div>
+
+<div class="nav-hint">Use &larr; &rarr; arrow keys or click to navigate</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let currentSlide = 0;
+
+  function showSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (n + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add('active');
+    document.getElementById('progressBar').style.width =
+      ((currentSlide + 1) / totalSlides * 100) + '%';
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); showSlide(currentSlide + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); showSlide(currentSlide - 1); }
+    if (e.key === 'Home') { e.preventDefault(); showSlide(0); }
+    if (e.key === 'End') { e.preventDefault(); showSlide(totalSlides - 1); }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.clientX > window.innerWidth / 2) showSlide(currentSlide + 1);
+    else showSlide(currentSlide - 1);
+  });
+
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+  document.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) showSlide(currentSlide + 1);
+      else showSlide(currentSlide - 1);
+    }
+  });
+
+  showSlide(0);
+</script>
+
+</body>
+</html>
